@@ -22,5 +22,9 @@ delete_generations() {
 }
 
 init_cpp_flake() {
-    cp ~/Development/cpp-template/flake.nix .
+    if [[ $1 -eq "-dir" ]]; then
+        cp ~/Development/cpp-template/ -r .
+    else
+        cp ~/Development/cpp-template/flake.nix .
+    fi
 }

@@ -118,16 +118,17 @@ mcd ()
 }
 
 sd() {
-    CACHE_FILE=~/fzf_cache/.fzf_dir_cache.txt
+    CACHE_FILE=~/.cache/fzf_cache/.fzf_dir_cache.txt
 
     # Ensure the cache file exists
-    mkdir -p ~/fzf_cache
+    mkdir -p ~/.cache/fzf_cache
     touch "$CACHE_FILE"
 
     if [[ "$1" == "-all" ]]; then
         # Find all directories starting from $HOME, excluding the 'windows' directory
         echo "Finding all directories (excluding 'windows') and updating the cache..."
-        find "$HOME" -path "$HOME/windows" -prune -o -type d -print 2>/dev/null | sed "s|$HOME|~|" >> "$CACHE_FILE"
+        # find "$HOME" -path "$HOME/windows" -prune -o -type d -print 2>/dev/null | sed "s|$HOME|~|" >> "$CACHE_FILE"
+        fd --type d --exclude windows . "$HOME" | sed "s|$HOME|~|" >> "$CACHE_FILE"
 
         # Remove duplicates and sort the cache
         sort -u "$CACHE_FILE" -o "$CACHE_FILE"
@@ -183,6 +184,10 @@ rgs() {
 
 cdbin() {
     cd $(dirname $(readlink -f $(which $1)))
+}
+
+enter_debian() {
+    sudo systemd-nspawn -D ~/Strong-Containers/Debian-13 --user=quun-bin
 }
 
 export PATH="/usr/sbin:/sbin:$PATH"

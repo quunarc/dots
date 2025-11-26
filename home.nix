@@ -71,6 +71,9 @@ in
     godot-mono
     godot
     anytype
+    syncthing
+    dipc
+    gimp
     #AI
     # games
     prismlauncher
@@ -104,10 +107,25 @@ in
     ripgrep
     desktop-file-utils
     television
+    chezmoi
+    fd
+    lsd
+    nodePackages_latest.fkill-cli
+    steam-run
+    bat
+    openssl
+    pinentry-all
 
     #------------------------ LOW ---------------------------
     #graphics
     glfw
+
+    # CONTAINERIZATION
+    debootstrap
+
+    # hacking
+    ghidra-bin
+    radare2
 
     dotnetCorePackages.sdk_9_0-bin
     clang-tools

@@ -1,6 +1,8 @@
 # aliases for mostly CLI based tools
-alias ll="ls -lhN"
-alias lla="ls -lhaN"
+alias l="lsd -l"
+alias ls="lsd"
+alias ll="lsd -lhN"
+alias lla="lsd -lhaN"
 alias rgl="rg --color=always --line-number"
 alias dush="du -sh *"
 alias cls="clear"
@@ -23,14 +25,14 @@ alias "tree3"="tree -L 3"
 # aliases to open/use programs efficiently
 alias "c."="code ."
 alias "z."="zeditor ."
-alias ns='nemo . > /dev/null 2>&1 &'
+alias ds='dolphin . > /dev/null 2>&1 &'
 alias lgit="lazygit"
-# alias mcaselector="sh ~/Games/Minecraft/MCA\ Selector/mcaselector.sh"
 alias rr='ranger'
+# alias mcaselector="sh ~/Games/Minecraft/MCA\ Selector/mcaselector.sh"
 
 # all the configs related aliases
 alias nixconf="sudo nvim /etc/nixos/configuration.nix"
-alias homeconf="nvim ~/.config/home-manager/home.nix"
+alias hc="nvim ~/.config/home-manager/home.nix"
 alias z.home="zeditor ~/.config/home-manager/home.nix"
 alias flakeconf="nvim ~/.config/home-manager/flake.nix"
 alias aliasconf="nvim ~/.dotfiles/dots/zsh/aliases.zsh"
