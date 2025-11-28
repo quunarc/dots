@@ -52,7 +52,8 @@
   };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
+  # services.xserver.videoDrivers = [ "modesetting" "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
 
@@ -99,7 +100,7 @@
 
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # SDDM
@@ -197,7 +198,7 @@
     xorg.libX11 xorg.libXcursor xorg.libXinerama xorg.libXi xorg.libXrandr
   ];
 
-  boot.loader.grub.device = "nodev";
+  # boot.loader.grub.device = "nodev";
 
   # fileSystems."/boot/efi" = {
   #   device = "/dev/disk/by-uuid/4A06-5132";
@@ -207,6 +208,11 @@
       device = "/dev/nvme0n1p1";
       fsType = "vfat";
   };
+
+  security.sudo.extraConfig = ''
+    quun ALL=(ALL) NOPASSWD: /home/quun/.nix-profile/bin/ydotool
+    quun ALL=(ALL) NOPASSWD: /home/quun/.nix-profile/bin/ydotoold
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -250,6 +256,34 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
+
+  specialisation = {
+
+  x11.configuration = {
+
+    # --- Force X11 ---
+    services.xserver.enable = true;
+    services.displayManager.sddm.wayland.enable = false;
+
+    # --- Nvidia X11 driver ---
+    services.xserver.videoDrivers = [ "nvidia" ];
+
+    hardware.nvidia = {
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+
+    # --- PRIME Hybrid Offload ---
+    hardware.nvidia.prime = {
+      offload.enable = true;
+      offload.enableOffloadCmd = true;
+
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:5:0:0";
+    };
+    };
+  };
 
 }
 

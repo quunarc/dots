@@ -74,6 +74,10 @@ in
     syncthing
     dipc
     gimp
+    easyeffects
+    firejail
+    chromium
+    aseprite
     #AI
     # games
     prismlauncher
@@ -115,6 +119,7 @@ in
     bat
     openssl
     pinentry-all
+    proxychains
 
     #------------------------ LOW ---------------------------
     #graphics
@@ -126,6 +131,9 @@ in
     # hacking
     ghidra-bin
     radare2
+
+    # Misc
+    ydotool
 
     dotnetCorePackages.sdk_9_0-bin
     clang-tools
