@@ -59,40 +59,49 @@ in
     '')
     #---------------------------------------------------------------------
 
-    # programs
-    firefox
-    qdirstat
-    btop
+    # Programs
+        # Browser
+        firefox
+        chromium
+        syncthing
+
+        # Engines
+        godot-mono
+        godot
+
+        # Art
+        krita
+        aseprite
+        gimp
+
+        # Productivity
+        anytype
+        obsidian
+
+        # Utilities
+        qdirstat
+        qbittorrent
+        easyeffects
+        bitwarden-desktop
+
+        # Games
+        prismlauncher
+
     filen-desktop
-    nicotine-plus
-    qbittorrent
     vlc
+    nicotine-plus
     telegram-desktop
-    freerdp
-    godot-mono
-    godot
-    anytype
-    syncthing
-    dipc
-    gimp
-    easyeffects
     firejail
-    chromium
-    aseprite
-    obsidian
     supercollider
-    bitwarden-desktop
-    #AI
-    # games
-    prismlauncher
 
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
-    # inputs.stable.legacyPackages.${systems}.jetbrains.idea-community-bin # IntelliJ IDEA
 
     # Editors
     neovim
     zed-editor
+    jetbrains.idea-community-bin
+
     #LSP
     inputs.csharplsp.packages.${systems}.default # Csharp LSP
     nixd
@@ -112,6 +121,8 @@ in
     lazygit
     jujutsu
     ranger
+    btop
+    dipc
     rclone
     lux
     zoxide
@@ -134,6 +145,7 @@ in
     #------------------------ LOW ---------------------------
     #graphics
     glfw
+    freerdp
 
     # CONTAINERIZATION
     debootstrap
@@ -142,7 +154,7 @@ in
     ghidra-bin
     radare2
 
-    nasm
+    nasm    # assembly compiler
 
     # Misc
     ydotool
