@@ -12,6 +12,7 @@ pkgs-stable = import (builtins.fetchTarball {
     sha256 = "0bz1qwd1fw9v4hmxi6h2qfgvxpv4kwdiz7xd9p7j1msr0b8d54h3";
 }) {
     system = pkgs.system;
+    config = { allowUnfree = true; };
 };
 in
 {
@@ -78,6 +79,9 @@ in
     firejail
     chromium
     aseprite
+    obsidian
+    supercollider
+    bitwarden-desktop
     #AI
     # games
     prismlauncher
@@ -94,6 +98,10 @@ in
     nixd
     nil
     lua-language-server
+    asm-lsp
+    pyright
+
+    # Python packages
 
     # Terminals
     kitty
@@ -119,7 +127,9 @@ in
     bat
     openssl
     pinentry-all
-    proxychains
+    steghide
+    ffmpeg
+    qemu_kvm
 
     #------------------------ LOW ---------------------------
     #graphics
@@ -131,6 +141,8 @@ in
     # hacking
     ghidra-bin
     radare2
+
+    nasm
 
     # Misc
     ydotool

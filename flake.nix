@@ -24,7 +24,7 @@
     in
     {
       homeConfigurations.quun = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${systems};
+        pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
         modules = [ ./home.nix ];
 	    extraSpecialArgs = { inherit self systems nixpkgs home-manager inputs; };
       };

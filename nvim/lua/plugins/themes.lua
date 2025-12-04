@@ -2,15 +2,14 @@ return {
   -- add gruvbox
     { "ellisonleao/gruvbox.nvim" },
     {
-    "Shatur/neovim-ayu",
-    config = function()
-        require("ayu").setup({
-        overrides = {
-            Normal = { bg = "#0e1017" },
-        },
-        })
-        -- vim.cmd("colorscheme ayu")
-    end,
+        "Shatur/neovim-ayu",
+        config = function()
+            require("ayu").setup({
+            overrides = {
+                Normal = { bg = "#0e1017" },
+            },
+            })
+        end,
     },
     {
         "iagorrr/noctishc.nvim",
@@ -24,10 +23,7 @@ return {
     },
 
   -- Configure LazyVim to load gruvbox
-    {
-        "LazyVim/LazyVim",
-        opts = {
-        colorscheme = "ayu",
-        },
-    },
+    { "rebelot/kanagawa.nvim" },
+    { "Kalidozza-theme/neovim" },
+    { "sainnhe/everforest" },
 }

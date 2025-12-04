@@ -85,6 +85,19 @@ enter_debian() {
     sudo systemd-nspawn -D ~/Strong-Containers/Debian-13 --user=quun-bin
 }
 
+ranger () {
+        local LOGFILE='/tmp/cd_ranger'
+        # `command ranger` to launch ranger itself,
+        # instead of causing an infinite loop with
+        # this function calling itself
+        command ranger "$@" || exit $?
+        if [[ -f "${LOGFILE}" ]]
+        then
+                cd "$(cat "${LOGFILE}")"
+                rm -f "${LOGFILE}"
+        fi
+}
+
 export PATH="/usr/sbin:/sbin:$PATH"
 export DOTNET_ROOT="/nix/store/gydpsi918ix7zfa8x6mfh06n4z64qw63-dotnet-sdk-9.0.306/share/dotnet/"
 eval "$(direnv hook zsh)"

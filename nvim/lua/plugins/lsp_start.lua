@@ -8,6 +8,8 @@ return {
                 nixd = {},
                 clangd = {},
                 lua_ls = {},
+                asm_lsp = {},
+                pyright = {},
             },
         },
     },

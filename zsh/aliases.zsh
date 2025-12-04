@@ -7,6 +7,7 @@ alias rgl="rg --color=always --line-number"
 alias dush="du -sh *"
 alias cls="clear"
 alias nrs="sudo nixos-rebuild switch"
+alias nsp="nix-shell -p"
 alias hms="home-manager switch"
 alias hmsf="home-manager switch --flake /home/quun/.config/home-manager"
 
