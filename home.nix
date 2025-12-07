@@ -9,7 +9,7 @@
 let
 pkgs-stable = import (builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz";
-    sha256 = "0bz1qwd1fw9v4hmxi6h2qfgvxpv4kwdiz7xd9p7j1msr0b8d54h3";
+    sha256 = "0yg5rmh06mr703jlzbkcmifk7jcgs6g7m1q2nmnl1x6nnrhscdzj";
 }) {
     system = pkgs.system;
     config = { allowUnfree = true; };
@@ -86,8 +86,14 @@ in
 
         # Games
         prismlauncher
+        lutris
+        pkgs-stable.steam
+        protonup-rs
+        protonup-qt
+        wine64
 
     filen-desktop
+    supersonic
     vlc
     nicotine-plus
     telegram-desktop
@@ -141,6 +147,7 @@ in
     steghide
     ffmpeg
     qemu_kvm
+    pkgs-stable.rar
 
     #------------------------ LOW ---------------------------
     #graphics
@@ -180,6 +187,10 @@ in
     # '';
   };
 
+  home.sessionPath = [
+    "/home/quun/Public/scripts/"
+  ];
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
@@ -206,5 +217,6 @@ in
     enable = true;
     nix-direnv.enable = true;
   };
+
 
 }
