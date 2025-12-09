@@ -12,10 +12,8 @@
     # external
     zen.url = "github:0xc000022070/zen-browser-flake";
     csharplsp.url = "github:SofusA/csharp-language-server";
-	#    lazyvim = {
-	# url = "github:pfassina/lazyvim-nix";
-	# inputs.nixpkgs.follows = "nixpkgs";
-	#    };
+    nix-alien.url = "github:thiagokokada/nix-alien";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:

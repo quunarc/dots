@@ -14,6 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.binfmt.emulatedSystems = [ "i386-linux" ];
 
   virtualisation.docker.enable = true;
 
@@ -28,6 +29,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.optimise.automatic = true;
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
 
   nixpkgs.overlays = lib.singleton (final: prev: {
     kdePackages = prev.kdePackages // {
@@ -212,6 +214,8 @@
     theme = "bira";
   };
 
+  programs.appimage.enable = true;
+
   programs.kdeconnect.enable = true;
 
   # List packages installed in system profile.
@@ -227,7 +231,7 @@
     # system
     networkmanager distrobox efibootmgr
     javaPackages.compiler.temurin-bin.jre-25
-    gcc nodejs_24
+    gcc rustup nodejs_24
 
     # important libraries
     nix-ld
@@ -241,11 +245,59 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
-    gcc gdb clang lldb_20
-    glibc libgcc zlib openssl libxml2 expat alsa-lib mesa gtk3
+    glibc
+    stdenv.cc.cc
+    pkgsi686Linux.stdenv.cc.cc
+    pkgsi686Linux.glibc
+
+    zlib 
+    openssl
+    libxml2
+    curl
+    libpng
+    libjpeg
+    expat
+    alsa-lib
+    mesa
+    gtk3
+    udev
+    dbus
+    fontconfig
+    freetype
+
     #xorg libs
-    xorg.libX11 xorg.libXcursor xorg.libXinerama xorg.libXi xorg.libXrandr
+    xorg.libX11 
+    xorg.libXi 
+    xorg.libXext
+    xorg.libXrandr
+    xorg.libXrender
+    xorg.libXcursor
+    xorg.libXinerama
+    xorg.libXfixes
+
+    libGL
+    libGLU
+    vulkan-loader
+
+    pulseaudio
+
+    libogg
+    libvorbis
+    libopus
+
+    wayland
+    libxkbcommon
   ];
+
+  environment.etc = {
+  # 64-bit loader for 64-bit binaries
+  "ld-linux-x86-64.so.2".source =
+    "${pkgs.stdenv.cc.cc}/lib/ld-linux-x86-64.so.2";
+
+  # 32-bit loader for 32-bit binaries
+  "ld-linux.so.2".source =
+    "${pkgs.pkgsi686Linux.stdenv.cc.cc}/lib/ld-linux.so.2";
+  };
 
   # boot.loader.grub.device = "nodev";
 

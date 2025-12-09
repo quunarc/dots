@@ -1,0 +1,7 @@
+# ~/.config/direnv/direnvrc
+# Silence direnv output
+export DIRENV_LOG_FORMAT=""
+
+# Suppress "Welcome to the devShell" etc.
+export NIX_SHELL_PRESERVE_PROMPT=1
+

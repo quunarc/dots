@@ -1,4 +1,5 @@
 # aliases for mostly CLI based tools
+alias lsd="lsd --color=always"
 alias l="lsd -l"
 alias ls="lsd"
 alias ll="lsd -lhN"
@@ -10,6 +11,7 @@ alias nrs="sudo nixos-rebuild switch"
 alias nsp="nix-shell -p"
 alias hms="home-manager switch"
 alias hmsf="home-manager switch --flake /home/quun/.config/home-manager"
+alias sr="steam-run"
 
 # cd
 alias dev="cd ~/Development/"

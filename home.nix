@@ -9,7 +9,7 @@
 let
 pkgs-stable = import (builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz";
-    sha256 = "0yg5rmh06mr703jlzbkcmifk7jcgs6g7m1q2nmnl1x6nnrhscdzj";
+    sha256 = "10h8yz4x1iacrp1bsih2kmpn1chaxwpmqrpy1lysrb8p9hfwacp1";
 }) {
     system = pkgs.system;
     config = { allowUnfree = true; };
@@ -91,6 +91,7 @@ in
         protonup-rs
         protonup-qt
         wine64
+        steam-run
 
     filen-desktop
     supersonic
@@ -102,6 +103,7 @@ in
 
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
+    inputs.nix-alien.packages.${systems}.default
 
     # Editors
     neovim
