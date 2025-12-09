@@ -247,8 +247,8 @@
   programs.nix-ld.libraries = with pkgs; [
     glibc
     stdenv.cc.cc
-    pkgsi686Linux.stdenv.cc.cc
-    pkgsi686Linux.glibc
+    # pkgsi686Linux.stdenv.cc.cc
+    # pkgsi686Linux.glibc
 
     zlib 
     openssl
