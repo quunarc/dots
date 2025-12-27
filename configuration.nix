@@ -8,7 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      /home/quun/System/musnix
     ];
+
+  musnix.enable = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -170,12 +173,15 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
   services.xserver.xkb.layout = "us";
+
+  services.flatpak.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
@@ -185,7 +191,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.quun = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" ]; # wheel Enables ‘sudo’ for the user.
+    extraGroups = [ "audio" "wheel" "networkmanager" "docker" ]; # wheel Enables ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -235,6 +241,8 @@
 
     # important libraries
     nix-ld
+    patchelf
+    file
     # build systems
     cmake gnumake scons pkg-config
   ];
@@ -250,6 +258,8 @@
     # pkgsi686Linux.stdenv.cc.cc
     # pkgsi686Linux.glibc
 
+    icu
+    libz
     zlib 
     openssl
     libxml2
@@ -314,6 +324,8 @@
     quun ALL=(ALL) NOPASSWD: /home/quun/.nix-profile/bin/ydotool
     quun ALL=(ALL) NOPASSWD: /home/quun/.nix-profile/bin/ydotoold
   '';
+
+  security.rtkit.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

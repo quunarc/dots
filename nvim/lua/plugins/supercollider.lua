@@ -1,0 +1,43 @@
+-- return {
+--   'davidgranstrom/scnvim',
+--   ft = 'supercollider',
+--   config = function()
+--     local scnvim = require 'scnvim'
+--     local map = scnvim.map
+--     local map_expr = scnvim.map_expr
+--     scnvim.setup {
+--       -- your config here
+--     }
+--   end
+-- }
+return {
+  {
+    "davidgranstrom/scnvim",
+    config = function()
+        local scnvim = require 'scnvim'
+        local map = scnvim.map
+        local map_expr = scnvim.map_expr
+
+    scnvim.setup({
+        keymaps = {
+            ['<M-e>'] = map('editor.send_line', {'i', 'n'}),
+            ['<C-e>'] = {
+                map('editor.send_block', {'i', 'n'}),
+                map('editor.send_selection', 'x'),
+            },
+        },
+
+        editor = {
+            highlight = {
+                color = 'IncSearch',
+            },
+        },
+        postwin = {
+            float = {
+                enabled = true,
+            },
+        },
+        })
+    end,
+  },
+}

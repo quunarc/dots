@@ -6,15 +6,15 @@
   ...
 }:
 
-let
-pkgs-stable = import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz";
-    sha256 = "10h8yz4x1iacrp1bsih2kmpn1chaxwpmqrpy1lysrb8p9hfwacp1";
-}) {
-    system = pkgs.system;
-    config = { allowUnfree = true; };
-};
-in
+# let
+# pkgs-stable = import (builtins.fetchTarball {
+#     url = "https://github.com/NixOS/nixpkgs/archive/nixos-25.05.tar.gz";
+#     sha256 = "1z0hb7pxqpn142wxcznd31zm0zflbim0cmfcxvmrrn9zgxdg2bfw";
+# }) {
+#     system = pkgs.system;
+#     config = { allowUnfree = true; };
+# };
+# in
 {
   home.username = "quun";
   home.homeDirectory = "/home/quun";
@@ -62,7 +62,6 @@ in
     # Programs
         # Browser
         firefox
-        chromium
         syncthing
 
         # Engines
@@ -83,23 +82,28 @@ in
         qbittorrent
         easyeffects
         bitwarden-desktop
+        nicotine-plus
 
         # Games
         prismlauncher
         lutris
-        pkgs-stable.steam
+        # pkgs-stable.steam
         protonup-rs
         protonup-qt
         wine64
         steam-run
+        bottles
+
+        # Media
+        supersonic
+        vlc
+        vlc-bittorrent
+        supercollider
+        vital
+        carla
 
     filen-desktop
-    supersonic
-    vlc
-    nicotine-plus
     telegram-desktop
-    firejail
-    supercollider
 
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
@@ -107,6 +111,7 @@ in
 
     # Editors
     neovim
+    emacs
     zed-editor
     jetbrains.idea-community-bin
 
@@ -117,6 +122,8 @@ in
     lua-language-server
     asm-lsp
     pyright
+    vimPlugins.scnvim
+    rust-analyzer
 
     # Python packages
 
@@ -149,19 +156,23 @@ in
     steghide
     ffmpeg
     qemu_kvm
-    pkgs-stable.rar
+    rar
+    xclip
 
     #------------------------ LOW ---------------------------
     #graphics
     glfw
     freerdp
+    ncurses
 
     # CONTAINERIZATION
     debootstrap
+    firejail
 
     # hacking
     ghidra-bin
     radare2
+    cutter
 
     nasm    # assembly compiler
 

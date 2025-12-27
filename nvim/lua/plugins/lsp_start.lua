@@ -6,6 +6,7 @@ return {
         opts = {
             servers = {
                 nixd = {},
+                rust_analyzer = {},
                 clangd = {},
                 lua_ls = {},
                 asm_lsp = {},

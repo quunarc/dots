@@ -98,8 +98,23 @@ ranger () {
         fi
 }
 
+# Check if running inside a Distrobox container
+if [ -n "$CONTAINER_ID" ] || [ -f "/run/.containerenv" ] || [ -f "/.dockerenv" ]; then
+    PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "
+    if [[ $PWD/ = /home/quun/Containers/debian-trixie/* ]]; then
+        cd $PWD
+    else
+        cd /home/quun/Containers/debian-trixie/
+    fi
+fi
+
+
 export PATH="/usr/sbin:/sbin:$PATH"
 export PATH="/home/quun/Public/scripts/bin/:$PATH"
+export PATH="/home/quun/Softwares/binaries/:$PATH"
+export PATH="/home/quun/.config/emacs/bin/:$PATH"
+
+
 export DOTNET_ROOT="/nix/store/gydpsi918ix7zfa8x6mfh06n4z64qw63-dotnet-sdk-9.0.306/share/dotnet/"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
