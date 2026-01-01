@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Personal/Security/Encryption/GPG Encryption.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -190,15 +190,18 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
   "active": "de4e9c4d2174692f",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Untitled.md",
     "Personal/Security/Encryption/GPG Encryption.md",
     "Study/Programming/Assembly/Starters.md",
+    "Excalidraw/Drawing 2026-01-01 23.46.10.excalidraw.md",
+    "Excalidraw",
+    "Welcome.md",
+    "Untitled.md",
     "Personal/Security/Encryption",
     "Personal/Security",
     "Personal",

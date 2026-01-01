@@ -26,6 +26,10 @@ strong {
     color: #ff7373;
 }
 
+span.cm-strong {
+    color: #ff7373;
+}
+
 .markdown-rendered code {
     color: #afb8ff;
 }
