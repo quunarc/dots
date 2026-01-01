@@ -98,6 +98,17 @@ ranger () {
         fi
 }
 
+container()
+{
+    if [[ $1 == "trixie" ]]; then
+        docker run -it --rm debian:trixie bash
+    elif [[ $1 == "arch" ]]; then
+        docker run -it --rm archlinux:latest bash
+    else
+        echo "Enter a correct distro as argument\n"
+    fi
+}
+
 # Check if running inside a Distrobox container
 if [ -n "$CONTAINER_ID" ] || [ -f "/run/.containerenv" ] || [ -f "/.dockerenv" ]; then
     PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "

@@ -20,6 +20,8 @@
   boot.binfmt.emulatedSystems = [ "i386-linux" ];
 
   virtualisation.docker.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -191,7 +193,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.quun = {
     isNormalUser = true;
-    extraGroups = [ "audio" "wheel" "networkmanager" "docker" ]; # wheel Enables ‘sudo’ for the user.
+    extraGroups = [ "audio" "wheel" "networkmanager" "docker" "libvirtd" ]; # wheel Enables ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];

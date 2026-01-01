@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "dc5422c509dc94be",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2b45b1a622d0caf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de4e9c4d2174692f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Personal/Security/Encryption/GPG Encryption.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GPG Encryption"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "39024ffe4a8004e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ad4e2cce6fc778ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd46c865fe9d32b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6f8aeaafef9c63a6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "19b43d53201a70a3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 241.5
+  },
+  "right": {
+    "id": "12a0fefea5710493",
+    "type": "split",
+    "children": [
+      {
+        "id": "a21f2617b6e7fba6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7df1c8f174cc842d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b240f7656f81ebd6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "527ab88cb96448db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e0f968047f7d602e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0e31f68c0ad0568f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "General/Projects/Programming Goals.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Programming Goals"
+            }
+          },
+          {
+            "id": "5f97c5d10b908075",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "de4e9c4d2174692f",
+  "lastOpenFiles": [
+    "Welcome.md",
+    "Untitled.md",
+    "Personal/Security/Encryption/GPG Encryption.md",
+    "Study/Programming/Assembly/Starters.md",
+    "Personal/Security/Encryption",
+    "Personal/Security",
+    "Personal",
+    "Study/Programming/Assembly",
+    "Study/Programming",
+    "Study",
+    "Untitled.canvas",
+    "General/Projects/Programming Goals.md",
+    "General/Projects",
+    "General/Test Note 1.md",
+    "Untitled.base",
+    "General"
+  ]
+}

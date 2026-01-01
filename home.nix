@@ -74,7 +74,6 @@
         gimp
 
         # Productivity
-        anytype
         obsidian
 
         # Utilities
@@ -158,6 +157,8 @@
     qemu_kvm
     rar
     xclip
+    lazydocker
+    clifm
 
     #------------------------ LOW ---------------------------
     #graphics

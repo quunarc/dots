@@ -15,6 +15,7 @@ alias hmsf="home-manager switch --flake /home/quun/.config/home-manager"
 alias sr="steam-run"
 alias clipb="xclip -selection clipboard"
 alias trixie="distrobox enter debian-trixie"
+alias appr="appimage-run"
 
 # cd
 alias dev="cd ~/Development/"
