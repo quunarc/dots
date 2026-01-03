@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d2b45b1a622d0caf",
+        "id": "217fd2701c33d195",
         "type": "tabs",
         "children": [
           {
-            "id": "de4e9c4d2174692f",
+            "id": "74ec5e89c112ab6b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal/Security/Encryption/GPG Encryption.md",
+                "file": "Reference/Syncthing Quick Setup.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GPG Encryption"
+              "title": "Syncthing Quick Setup"
             }
           }
         ]
@@ -74,11 +74,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "12a0fefea5710493",
@@ -94,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Reference/GPG Encryption Quick Reference.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for GPG Encryption Quick Reference"
             }
           },
           {
@@ -112,11 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Reference/GPG Encryption Quick Reference.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from GPG Encryption Quick Reference"
             }
           },
           {
@@ -154,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Projects/Programming Goals.md",
+                "file": "Reference/GPG Encryption Quick Reference.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Programming Goals"
+              "title": "Outline of GPG Encryption Quick Reference"
             }
           },
           {
@@ -194,10 +198,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "de4e9c4d2174692f",
+  "active": "74ec5e89c112ab6b",
   "lastOpenFiles": [
-    "Personal/Security/Encryption/GPG Encryption.md",
-    "Study/Programming/Assembly/Starters.md",
+    "Reference/GPG Encryption Quick Reference.md",
+    "Reference/Syncthing Quick Setup.md",
+    "Study/Assembly/Fundamental Commands - 0x01.md",
+    "Guide",
+    "Reference",
     "Excalidraw/Drawing 2026-01-01 23.46.10.excalidraw.md",
     "Excalidraw",
     "Welcome.md",
@@ -205,14 +212,12 @@
     "Personal/Security/Encryption",
     "Personal/Security",
     "Personal",
-    "Study/Programming/Assembly",
-    "Study/Programming",
+    "Study/Assembly",
+    "Programming",
     "Study",
     "Untitled.canvas",
     "General/Projects/Programming Goals.md",
     "General/Projects",
-    "General/Test Note 1.md",
-    "Untitled.base",
-    "General"
+    "General/Test Note 1.md"
   ]
 }
