@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "217fd2701c33d195",
+        "id": "60b81feda6470e3e",
         "type": "tabs",
         "children": [
           {
-            "id": "74ec5e89c112ab6b",
+            "id": "612c0f8a1cf4a5d5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Reference/Syncthing Quick Setup.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Syncthing Quick Setup"
+              "title": "New tab"
             }
           }
         ]
@@ -79,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "12a0fefea5710493",
@@ -198,10 +193,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "74ec5e89c112ab6b",
+  "active": "612c0f8a1cf4a5d5",
   "lastOpenFiles": [
-    "Reference/GPG Encryption Quick Reference.md",
     "Reference/Syncthing Quick Setup.md",
+    "Reference/GPG Encryption Quick Reference.md",
     "Study/Assembly/Fundamental Commands - 0x01.md",
     "Guide",
     "Reference",

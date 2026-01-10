@@ -24,6 +24,7 @@ alias cdnix="cd /etc/nixos"
 alias dots="cd ~/.dotfiles/dots"
 alias conf="cd ~/.config/"
 alias fonts="cd ~/.local/share/fonts"
+alias b="cd .."
 
 # yes i made these i know
 alias "tree1"="tree -L 1"

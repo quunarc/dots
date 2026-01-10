@@ -4,6 +4,8 @@ source_if_exists() {
 
 source_if_exists ~/.dotfiles/dots/zsh/aliases.zsh           # aliases
 source_if_exists ~/.dotfiles/dots/zsh/nix-specific-fns.zsh  # Nix only functions
+source_if_exists ~/.dotfiles/dots/zsh/init_cpp_template.zsh
+source_if_exists ~/.dotfiles/dots/zsh/flac2mp3.zsh
 
 # Custom Functions
 mcd ()

@@ -5,7 +5,8 @@ init_cpp_flake() {
     # Default paths
     local default_minimal_template="${HOME}/Development/Templates/cpp-template-minimal"
     local default_full_template="${HOME}/Development/Templates/cpp-template"
-    local default_flake_only="${HOME}/Development/cpp-template/flake.nix"
+    local default_flake_only="${HOME}/Development/Templates/cpp-template/flake.nix"
+    local default_envrc_only="${HOME}/Development/Templates/cpp-template/.envrc"
     
     # Colors for output
     local RED='\033[0;31m'
@@ -283,6 +284,7 @@ EOF
             if [[ -f "$template_path" ]]; then
                 print_msg "$BLUE" "Copying flake.nix to current directory"
                 cp "$template_path" ./flake.nix
+                cp "$default_envrc_only" ./.envrc
 
                 if [[ $? -eq 0 ]]; then
                     print_msg "$GREEN" "✓ flake.nix copied successfully"

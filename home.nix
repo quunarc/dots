@@ -26,27 +26,6 @@
   # imports = [
   # 	inputs.lazyvim.homeManagerModules.default
   # ];
-  # programs.lazyvim = {
-  #     enable = true;
-  #
-  #     extras = {
-  #       lang.nix.enable = true;
-  #       lang.python.enable = true;
-  #     };
-  #
-  #     # Required for syntax highlighting
-  #     treesitterParsers = with pkgs.tree-sitter-grammars; [
-  #       tree-sitter-nix
-  #       tree-sitter-python
-  #     ];
-  #
-  #     # Language servers, formatters, linters (since Mason is disabled)
-  #     extraPackages = with pkgs; [
-  #       nixd       # Nix LSP
-  #       pyright    # Python LSP
-  #       alejandra  # Nix formatter
-  #     ];
-  # };
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -82,9 +61,10 @@
         easyeffects
         bitwarden-desktop
         nicotine-plus
+        mediasynclite
+        strawberry
 
         # Games
-        prismlauncher
         lutris
         # pkgs-stable.steam
         protonup-rs
@@ -107,6 +87,7 @@
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
+    inputs.kwin-effects-glass.packages.${systems}.default
 
     # Editors
     neovim

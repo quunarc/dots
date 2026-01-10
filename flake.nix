@@ -11,6 +11,7 @@
 
     # external
     zen.url = "github:0xc000022070/zen-browser-flake";
+    kwin-effects-glass.url = "github:4v3ngR/kwin-effects-glass";
     csharplsp.url = "github:SofusA/csharp-language-server";
     nix-alien.url = "github:thiagokokada/nix-alien";
 

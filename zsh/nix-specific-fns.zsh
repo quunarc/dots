@@ -21,11 +21,15 @@ delete_generations() {
     sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than $1d
 }
 
-init_cpp_flake() {
-    if [[ $1 == "-dir" ]]; then
-        cp ~/Development/cpp-template/ -r .
-        mv ./cpp-template/ $2
-    else
-        cp ~/Development/cpp-template/flake.nix .
-    fi
+# init_cpp_flake() {
+#     if [[ $1 == "-dir" ]]; then
+#         cp ~/Development/cpp-template/ -r .
+#         mv ./cpp-template/ $2
+#     else
+#         cp ~/Development/cpp-template/flake.nix .
+#     fi
+# }
+
+flac_to_mp3() {
+    ffmpeg -i $1 -c:a libmp3lame -b:a 320k -map_metadata 0 -id3v2_version 3 output.mp3
 }
