@@ -38,6 +38,7 @@ sd() {
     if [[ -s "$CACHE_FILE" ]]; then
         echo "Selecting a directory from cache..."
         selected_dir=$(cat "$CACHE_FILE" | fzf)
+        # selected_dir=$(tac "$CACHE_FILE" | awk '!seen[$0]++' | fzf ...)
 
         if [[ -n "$selected_dir" ]]; then
             # Convert ~/ back to $HOME for `cd`

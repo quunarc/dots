@@ -10,9 +10,21 @@
     };
 
     # external
-    zen.url = "github:0xc000022070/zen-browser-flake";
-    kwin-effects-glass.url = "github:4v3ngR/kwin-effects-glass";
-    csharplsp.url = "github:SofusA/csharp-language-server";
+    csharplsp = {
+        url = "github:SofusA/csharp-language-server";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    kwin-effects-glass = {
+        url = "github:4v3ngR/kwin-effects-glass";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen = {
+        url = "github:0xc000022070/zen-browser-flake";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-alien.url = "github:thiagokokada/nix-alien";
 
   };

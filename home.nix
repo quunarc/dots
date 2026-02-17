@@ -46,11 +46,13 @@
         # Engines
         godot-mono
         godot
+        renderdoc
 
         # Art
         krita
         aseprite
         gimp
+        blender
 
         # Productivity
         obsidian
@@ -59,19 +61,22 @@
         qdirstat
         qbittorrent
         easyeffects
-        bitwarden-desktop
         nicotine-plus
         mediasynclite
         strawberry
+        obs-studio
 
         # Games
         lutris
-        # pkgs-stable.steam
         protonup-rs
         protonup-qt
         wine64
         steam-run
         bottles
+
+        # Emulation
+        retroarch
+        azahar
 
         # Media
         supersonic
@@ -80,6 +85,7 @@
         supercollider
         vital
         carla
+        tauon
 
     filen-desktop
     telegram-desktop
@@ -89,23 +95,28 @@
     inputs.nix-alien.packages.${systems}.default
     inputs.kwin-effects-glass.packages.${systems}.default
 
-    # Editors
+    # Editors / IDEs
     neovim
     emacs
     zed-editor
     jetbrains.idea-community-bin
+    jetbrains.clion
 
-    #LSP
-    inputs.csharplsp.packages.${systems}.default # Csharp LSP
-    nixd
-    nil
-    lua-language-server
-    asm-lsp
-    pyright
-    vimPlugins.scnvim
-    rust-analyzer
+    # Neovim plugins
+        # LSP
+        inputs.csharplsp.packages.${systems}.default # Csharp LSP
+        nixd
+        nil
+        lua-language-server
+        asm-lsp
+        pyright
+        rust-analyzer
+        glslls
+
+    # vimPlugins.scnvim
 
     # Python packages
+    python3
 
     # Terminals
     kitty
@@ -114,7 +125,6 @@
     # CLI tools
     git
     lazygit
-    jujutsu
     ranger
     btop
     dipc
@@ -124,8 +134,6 @@
     fzf
     ripgrep
     desktop-file-utils
-    television
-    chezmoi
     fd
     lsd
     nodePackages_latest.fkill-cli
@@ -135,7 +143,6 @@
     pinentry-all
     steghide
     ffmpeg
-    qemu_kvm
     rar
     xclip
     lazydocker
@@ -148,6 +155,7 @@
     ncurses
 
     # CONTAINERIZATION
+    qemu_kvm
     debootstrap
     firejail
 

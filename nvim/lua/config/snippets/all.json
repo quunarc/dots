@@ -1,0 +1,11 @@
+{
+  "Header Section": {
+    "prefix": "hmod",
+    "body": [
+      "// ------------------- ${1:Model} ---------------------------",
+      "// -----------------------------------------------------",
+      "$0"
+    ],
+    "description": "Inserts a commented section header"
+  }
+}

@@ -244,6 +244,8 @@
     # important libraries
     nix-ld
     patchelf
+    clang
+    clang-tools
     file
     # build systems
     cmake gnumake scons pkg-config
@@ -257,6 +259,8 @@
   programs.nix-ld.libraries = with pkgs; [
     glibc
     stdenv.cc.cc
+    clang
+    clang-tools
     # pkgsi686Linux.stdenv.cc.cc
     # pkgsi686Linux.glibc
 

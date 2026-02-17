@@ -11,7 +11,7 @@ alias nrs="sudo nixos-rebuild switch"
 alias nsp="nix-shell -p"
 alias npi="nix profile install nixpkgs#"
 alias hms="home-manager switch"
-alias hmsf="home-manager switch --flake /home/quun/.config/home-manager"
+alias hmsf="home-manager switch --flake /home/quun/.dotfiles/dots/"
 alias sr="steam-run"
 alias clipb="xclip -selection clipboard"
 alias trixie="distrobox enter debian-trixie"
@@ -36,6 +36,7 @@ alias emacs="emacs -fs"
 alias "c."="code ."
 alias "z."="zeditor ."
 alias ds='dolphin . > /dev/null 2>&1 &'
+alias clion='clion . > /dev/null 2>&1 &'
 alias lgit="lazygit"
 alias rr='ranger'
 alias vlc='VLC_PLUGIN_PATH=/nix/store/qpx2vagbyra7hdh1zlivq55a4jvc2d9n-vlc-bittorrent-2.15/lib vlc'

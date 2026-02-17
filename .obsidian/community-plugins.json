@@ -1,5 +1,7 @@
 [
   "obsidian-git",
   "obsidian-excalidraw-plugin",
-  "obsidian-minimal-settings"
+  "obsidian-minimal-settings",
+  "codeblock-customizer",
+  "obsidian-latex-suite"
 ]

@@ -11,13 +11,74 @@
             "id": "612c0f8a1cf4a5d5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Programming/OpenGL/Vertex Objects.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Vertex Objects"
+            }
+          },
+          {
+            "id": "d217374f5b8c9adc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming/Assembly/Fundamental Commands - 0x01.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fundamental Commands - 0x01"
+            }
+          },
+          {
+            "id": "ac395427e856681e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming/C++/Linkage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linkage"
+            }
+          },
+          {
+            "id": "bdb9b8cfc8e7e17e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming/C++/Scope.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Scope"
+            }
+          },
+          {
+            "id": "7a9d304677f88879",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Programming/OpenGL/Vertex Objects.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Vertex Objects"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -70,12 +131,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 201.5
   },
   "right": {
     "id": "12a0fefea5710493",
@@ -91,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reference/GPG Encryption Quick Reference.md",
+                "file": "NixOS/Godot/Using GDExtension.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for GPG Encryption Quick Reference"
+              "title": "Backlinks for Using GDExtension"
             }
           },
           {
@@ -110,12 +170,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reference/GPG Encryption Quick Reference.md",
+                "file": "NixOS/Godot/Using GDExtension.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from GPG Encryption Quick Reference"
+              "title": "Outgoing links from Using GDExtension"
             }
           },
           {
@@ -153,13 +213,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reference/GPG Encryption Quick Reference.md",
+                "file": "NixOS/Godot/Using GDExtension.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GPG Encryption Quick Reference"
+              "title": "Outline of Using GDExtension"
             }
           },
           {
@@ -177,8 +237,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,26 +252,37 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "612c0f8a1cf4a5d5",
+  "active": "d217374f5b8c9adc",
   "lastOpenFiles": [
-    "Reference/Syncthing Quick Setup.md",
+    "Programming/OpenGL/Vertex Objects.md",
+    "Excalidraw/Drawing 2026-02-02 07.00.15.excalidraw.md",
+    "Excalidraw",
+    "Programming/OpenGL/Vector and Matrices.md",
+    "Programming/C++/Linkage.md",
+    "NixOS/General Notes.md",
+    "Programming/Untitled.md",
+    "Programming/OpenGL",
+    "NixOS/Godot/Using GDExtension.md",
+    "NixOS/Godot/Compiling godot.md",
+    "NixOS/Godot",
+    "Programming/Assembly/Fundamental Commands - 0x01.md",
     "Reference/GPG Encryption Quick Reference.md",
-    "Study/Assembly/Fundamental Commands - 0x01.md",
+    "Reference/Syncthing Quick Setup.md",
+    "Programming/C++/Scope.md",
+    "NixOS",
+    "Untitled.md",
+    "Excalidraw/Drawing 2026-01-25 08.08.19.excalidraw.md",
+    "().md",
+    "Programming/C++",
     "Guide",
     "Reference",
     "Excalidraw/Drawing 2026-01-01 23.46.10.excalidraw.md",
-    "Excalidraw",
     "Welcome.md",
-    "Untitled.md",
     "Personal/Security/Encryption",
     "Personal/Security",
     "Personal",
-    "Study/Assembly",
-    "Programming",
-    "Study",
     "Untitled.canvas",
     "General/Projects/Programming Goals.md",
-    "General/Projects",
     "General/Test Note 1.md"
   ]
 }
