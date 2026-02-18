@@ -44,11 +44,12 @@ alias vlc='VLC_PLUGIN_PATH=/nix/store/qpx2vagbyra7hdh1zlivq55a4jvc2d9n-vlc-bitto
 
 # all the configs related aliases
 alias nixconf="sudo nvim /etc/nixos/configuration.nix"
-alias hc="nvim ~/.config/home-manager/home.nix"
-alias z.home="zeditor ~/.config/home-manager/home.nix"
 alias flakeconf="nvim ~/.config/home-manager/flake.nix"
 alias aliasconf="nvim ~/.dotfiles/dots/zsh/aliases.zsh"
-alias nixfns="nvim ~/.dotfiles/dots/zsh/nix-specific-fns.zsh"
 alias kittyconf="nvim ~/.dotfiles/dots/kitty/kitty.conf"
 alias zshconf="nvim ~/.zshrc"
+alias nvimconf="nvim ~/.dotfiles/dots/NixvimLazyvim/flake.nix"
+alias hc="nvim ~/.config/home-manager/home.nix"
+alias z.home="zeditor ~/.config/home-manager/home.nix"
+alias nixfns="nvim ~/.dotfiles/dots/zsh/nix-specific-fns.zsh"
 alias so="source ~/.zshrc"

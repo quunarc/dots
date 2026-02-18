@@ -25,6 +25,8 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    my-nvim.url = "/home/quun/.dotfiles/dots/NixvimLazyvim";
+
     nix-alien.url = "github:thiagokokada/nix-alien";
 
   };

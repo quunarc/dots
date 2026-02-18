@@ -7,4 +7,5 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.opt.scroll = 10
 vim.g.autoformat = false

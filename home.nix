@@ -94,9 +94,10 @@
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
     inputs.kwin-effects-glass.packages.${systems}.default
+    inputs.my-nvim.packages.${systems}.default
 
     # Editors / IDEs
-    neovim
+    # neovim
     emacs
     zed-editor
     jetbrains.idea-community-bin
