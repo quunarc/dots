@@ -1,6 +1,16 @@
 local my_config_path = _G.NIX_CONFIG_PATH
 local lazy_plugin_path = _G.NIX_LAZY_PATH
 
+-- Override the config path to prevent looking in ~/.config/nvim
+vim.cmd("set runtimepath^=" .. _G.NIX_CONFIG_PATH)
+vim.cmd("set runtimepath+=/etc/xdg/nvim") -- or whatever you need
+
+-- Remove the default config path if it exists
+local default_config = vim.fn.expand("~/.config/nvim")
+if vim.fn.isdirectory(default_config) == 1 then
+    vim.opt.rtp:remove(default_config)
+end
+
 -- 1. Setup paths using the Nix Store path
 vim.opt.rtp:prepend(my_config_path)
 

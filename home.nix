@@ -105,7 +105,7 @@
 
     # Neovim plugins
         # LSP
-        inputs.csharplsp.packages.${systems}.default # Csharp LSP
+        # inputs.csharplsp.packages.${systems}.default # Csharp LSP
         nixd
         nil
         lua-language-server

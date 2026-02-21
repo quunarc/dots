@@ -16,7 +16,7 @@ return {
         "iagorrr/noctishc.nvim",
         config = function ()
             require("noctishc").setup()
-            vim.cmd("colorscheme nordfox")
+            vim.cmd("colorscheme vague")
         end
     },
     {
@@ -29,4 +29,8 @@ return {
     { "sainnhe/everforest" },
     { "EdenEast/nightfox.nvim" }, -- lazy
     { "slugbyte/lackluster.nvim" },
+    { "thesimonho/kanagawa-paper.nvim" },
+    { "romainl/Apprentice" },
+    { "vague-theme/vague.nvim" },
+    { "water-sucks/darkrose.nvim" },
 }

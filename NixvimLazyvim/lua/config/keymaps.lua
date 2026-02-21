@@ -19,3 +19,6 @@ map("n", "<A-Up>", ":m .-2<CR>==", { noremap = true, silent = true })  -- Move l
 map("n", "<A-Down>", ":m .+1<CR>==", { noremap = true, silent = true }) -- Move line down
 map("v", "<A-Up>", ":m '<-2<CR>gv=gv", { noremap = true, silent = true }) -- Move selection up
 map("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true }) -- Move selection down
+
+map("n", "<C-j>", "10j", { silent = true })
+map("n", "<C-k>", "10k", { silent = true })

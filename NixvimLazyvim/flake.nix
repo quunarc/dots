@@ -41,6 +41,8 @@
             # Telescope
             ripgrep
             tree-sitter
+            omnisharp-roslyn
+            dotnet-sdk
         ];
 
         extraPlugins = [ pkgs.vimPlugins.lazy-nvim ];
