@@ -1,4 +1,7 @@
-./plugins/obsidian-excalidraw-plugin/
-./plugins/table-editor-obsidian/
-./themes/Royal\ Velvet/
-./themes/Sandstorm/
+plugins/obsidian-excalidraw-plugin/
+plugins/obsidian-latex-suite/
+plugins/table-editor-obsidian/
+plugins/table-editor-obsidian/
+plugins/copilot/
+themes/Royal\ Velvet/
+themes/Sandstorm/

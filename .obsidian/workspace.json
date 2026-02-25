@@ -50,45 +50,17 @@
             }
           },
           {
-            "id": "b858283a4a932668",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "ac395427e856681e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming/C++/Linkage.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linkage"
-            }
-          },
-          {
             "id": "bdb9b8cfc8e7e17e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/C++/Scope.md",
+                "file": "Reference/Syncthing Quick Setup.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scope"
+              "title": "Syncthing Quick Setup"
             }
           },
           {
@@ -179,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "NixOS/Godot/Using GDExtension.md",
+                "file": "Reference/Syncthing Quick Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Using GDExtension"
+              "title": "Backlinks for Syncthing Quick Setup"
             }
           },
           {
@@ -259,13 +231,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "9027d273447e4f90",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -277,42 +259,48 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "b858283a4a932668",
+  "active": "cd46c865fe9d32b9",
   "lastOpenFiles": [
-    "Reference/GPG Encryption Quick Reference.md",
-    "Untitled.md",
-    "Reference/Syncthing Quick Setup.md",
-    "Programming/Assembly/Fundamental Commands - 0x01.md",
-    "Programming/OpenGL/Vector and Matrices.md",
-    "Programming/OpenGL/Vertex Objects.md",
-    "Study/History/Math and Physics.md",
-    "Origins of coffee.md",
-    "Study/History",
-    "Excalidraw/Drawing 2026-02-02 07.00.15.excalidraw.md",
-    "Excalidraw",
-    "Programming/C++/Linkage.md",
-    "NixOS/General Notes.md",
-    "Programming/Untitled.md",
-    "Programming/OpenGL",
-    "NixOS/Godot/Using GDExtension.md",
-    "NixOS/Godot/Compiling godot.md",
-    "NixOS/Godot",
-    "Programming/C++/Scope.md",
-    "NixOS",
-    "Excalidraw/Drawing 2026-01-25 08.08.19.excalidraw.md",
-    "().md",
-    "Programming/C++",
-    "Guide",
-    "Reference",
-    "Excalidraw/Drawing 2026-01-01 23.46.10.excalidraw.md",
-    "Welcome.md",
-    "Personal/Security/Encryption",
-    "Personal/Security",
+    "Untitled 1.canvas",
     "Untitled.canvas",
-    "General/Projects/Programming Goals.md",
-    "General/Test Note 1.md"
+    "Reference/Git untrack files and add to .gdignore correctly.md",
+    "Excalidraw/Drawing 2026-02-02 07.00.15.excalidraw.md",
+    "Study/History/Math and Physics.md",
+    "Programming/OpenGL/Vertex Objects.md",
+    "Programming/OpenGL/Vector and Matrices.md",
+    "NixOS/General Notes.md",
+    "NixOS/Neovim",
+    "NixOS/Godot/Using GDExtension.md",
+    "copilot/copilot-conversations/a@20260226_002119.md",
+    "copilot/copilot-conversations/Elaborate_on_the_history_of_mathematics_prefferably_from_wikipedia_from@20260226_002020.md",
+    "copilot/copilot-conversations",
+    "Programming/C++/Linkage.md",
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "Study/History",
+    "Excalidraw",
+    "Programming/OpenGL",
+    "NixOS/Godot",
+    "NixOS",
+    "Programming/C++"
   ]
 }
