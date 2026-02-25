@@ -26,6 +26,7 @@
     };
 
     my-nvim.url = "/home/quun/.dotfiles/dots/NixvimLazyvim";
+    nvim-custom.url = "/home/quun/Softwares/NvimCustom/";
 
     nix-alien.url = "github:thiagokokada/nix-alien";
 

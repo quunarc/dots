@@ -100,11 +100,13 @@
                 drv;
             lazyPath = pkgs.linkFarm "lazy-plugins" (builtins.map mkEntryFromDrv plugins);
             myConfig = ./lua;
+            projectPath = ".";
             in
             ''
             -- Inject the Nix store paths into global Lua variables
             _G.NIX_CONFIG_PATH = "${myConfig}"
             _G.NIX_LAZY_PATH = "${lazyPath}"
+            _G.LIVE_CONFIG_PATH = "${projectPath}" -- Pass the "Live" path to Lua
 
             -- Load the external Lua file
             ${builtins.readFile ./lua/init-nix.lua}
@@ -116,8 +118,8 @@
     in
     {
         packages = {
-        default = nvim-pkg;
-        nvim = nvim-pkg;
+            default = nvim-pkg;
+            nvim = nvim-pkg;
         };
     };
     };

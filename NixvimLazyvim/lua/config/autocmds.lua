@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end,
 })
 
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = '#0000FF', italic = true })
+
 -- vim.api.nvim_create_autocmd('FileType', {
 --   pattern = 'cs',
 --   callback = function(args)

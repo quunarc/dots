@@ -16,6 +16,7 @@ alias sr="steam-run"
 alias clipb="xclip -selection clipboard"
 alias trixie="distrobox enter debian-trixie"
 alias appr="appimage-run"
+alias flakeupdate="nix flake update"
 
 # cd
 alias dev="cd ~/Development/"
@@ -40,6 +41,7 @@ alias clion='clion . > /dev/null 2>&1 &'
 alias lgit="lazygit"
 alias rr='ranger'
 alias vlc='VLC_PLUGIN_PATH=/nix/store/qpx2vagbyra7hdh1zlivq55a4jvc2d9n-vlc-bittorrent-2.15/lib vlc'
+alias nvimc="nix run ~/.dotfiles/dots/NixvimLazyvim/ .#nvimc"
 # alias mcaselector="sh ~/Games/Minecraft/MCA\ Selector/mcaselector.sh"
 
 # all the configs related aliases

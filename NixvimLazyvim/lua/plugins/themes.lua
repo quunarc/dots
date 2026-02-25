@@ -14,20 +14,18 @@ return {
     },
     {
         "iagorrr/noctishc.nvim",
-        config = function ()
-            require("noctishc").setup()
-            vim.cmd("colorscheme vague")
-        end
+        -- config = function ()
+        --     require("noctishc").setup()
+        --     vim.cmd("colorscheme vague")
+        -- end
     },
-    {
-        "arturgoms/moonbow.nvim"
-    },
+    { "arturgoms/moonbow.nvim" },
+    { "EdenEast/nightfox.nvim" },
 
   -- Configure LazyVim to load gruvbox
     { "rebelot/kanagawa.nvim" },
     { "Kalidozza-theme/neovim" },
     { "sainnhe/everforest" },
-    { "EdenEast/nightfox.nvim" }, -- lazy
     { "slugbyte/lackluster.nvim" },
     { "thesimonho/kanagawa-paper.nvim" },
     { "romainl/Apprentice" },

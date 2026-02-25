@@ -22,3 +22,5 @@ map("v", "<A-Down>", ":m '>+1<CR>gv=gv", { noremap = true, silent = true }) -- M
 
 map("n", "<C-j>", "10j", { silent = true })
 map("n", "<C-k>", "10k", { silent = true })
+map("v", "<C-j>", "10j", { silent = true })
+map("v", "<C-k>", "10k", { silent = true })
