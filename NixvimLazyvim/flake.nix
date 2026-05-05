@@ -43,6 +43,11 @@
             tree-sitter
             omnisharp-roslyn
             dotnet-sdk
+            astro-language-server
+            typescript-language-server
+            tailwindcss-language-server
+            typescript
+            gopls
         ];
 
         extraPlugins = [ pkgs.vimPlugins.lazy-nvim ];

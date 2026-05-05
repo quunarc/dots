@@ -20,12 +20,17 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    kwin-effects-better-blur-dx = {
+      url = "github:xarblu/kwin-effects-better-blur-dx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen = {
         url = "github:0xc000022070/zen-browser-flake";
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    my-nvim.url = "/home/quun/.dotfiles/dots/NixvimLazyvim";
+    my-nvim.url = "path:/home/quun/.dotfiles/dots/NixvimLazyvim";
     nvim-custom.url = "/home/quun/Softwares/NvimCustom/";
 
     nix-alien.url = "github:thiagokokada/nix-alien";

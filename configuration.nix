@@ -4,20 +4,43 @@
 
 { config, lib, pkgs, ... }:
 
+let
+  lanzaboote-src = builtins.fetchTarball {
+    url = "https://github.com/nix-community/lanzaboote/archive/v0.4.2.tar.gz";
+    sha256 = "0xc1wawnb0297h5khxblmf9pd1fry950xkcm7mwlck19s2906h80"; # Use a dummy or correct hash
+  };
+  lanzaboote = import lanzaboote-src;
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       /home/quun/System/musnix
+
+      lanzaboote.nixosModules.lanzaboote
     ];
 
   musnix.enable = true;
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = lib.mkForce false;
+
+  # 2. Enable Lanzaboote
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl/";
+  };
+
+  # boot.loader.grub = {
+  #   enable = true;
+  #   device = "nodev";
+  #   efiSupport = true;
+  #   useOSProber = true;
+  # };
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.binfmt.emulatedSystems = [ "i386-linux" ];
+  # boot.binfmt.emulatedSystems = [ "i386-linux" ];
 
   virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
@@ -35,6 +58,18 @@
   nix.optimise.automatic = true;
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
+
+  systemd.settings.Manager = {
+    DefaultLimitNOFILE=524288;
+  };
+
+  security.pam.loginLimits = [{
+      domain = "quun";
+      type = "hard";
+      item = "nofile";
+      value = "524288";
+  }];
+
 
   nixpkgs.overlays = lib.singleton (final: prev: {
     kdePackages = prev.kdePackages // {
@@ -85,6 +120,11 @@
     };
   });
 
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 3*1024; # 3 GB
+  }];
+
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 
@@ -105,6 +145,12 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+
+    extraPackages = with pkgs; [
+      vulkan-loader
+      vulkan-validation-layers
+      vulkan-extension-layer
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -176,6 +222,31 @@
     enable = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
+    # Configure WirePlumber to disable suspend
+    wireplumber.extraConfig = {
+      "10-disable-suspend" = {
+        "monitor.alsa.rules" = [
+          {
+            matches = [
+              {
+                # Match all alsa sinks and sources
+                "node.name" = "~alsa_input.*";
+              }
+              {
+                "node.name" = "~alsa_output.*";
+              }
+            ];
+            actions = {
+              update-props = {
+                "session.suspend-timeout-seconds" = 0;
+                "node.always-process" = true;
+              };
+            };
+          }
+        ];
+      };
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -193,7 +264,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.quun = {
     isNormalUser = true;
-    extraGroups = [ "audio" "wheel" "networkmanager" "docker" "libvirtd" ]; # wheel Enables ‘sudo’ for the user.
+    extraGroups = [ "audio" "wheel" "fuse" "networkmanager" "docker" "libvirtd" ]; # wheel Enables ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -209,7 +280,6 @@
       };
   };
 
-
   programs.zsh = {
     enable = true;
     enableBashCompletion = true;
@@ -223,8 +293,14 @@
   };
 
   programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   programs.kdeconnect.enable = true;
+
+  programs.steam = {
+    enable = true;
+  };
+
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -280,6 +356,8 @@
     dbus
     fontconfig
     freetype
+    fuse3
+    fuse2
 
     #xorg libs
     xorg.libX11 

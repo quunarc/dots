@@ -65,9 +65,11 @@
         mediasynclite
         strawberry
         obs-studio
+        gearlever
 
         # Games
         lutris
+        prismlauncher
         protonup-rs
         protonup-qt
         wine64
@@ -86,6 +88,8 @@
         vital
         carla
         tauon
+        cardinal     # cardinal vcv rack
+        helvum       # audio pipeline graph
 
     filen-desktop
     telegram-desktop
@@ -94,6 +98,7 @@
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
     inputs.kwin-effects-glass.packages.${systems}.default
+    inputs.kwin-effects-better-blur-dx.packages.${systems}.default
     inputs.my-nvim.packages.${systems}.default
 
     # Editors / IDEs
@@ -102,6 +107,7 @@
     zed-editor
     jetbrains.idea-community-bin
     jetbrains.clion
+    vscode
 
     # Neovim plugins
         # LSP
@@ -125,6 +131,7 @@
 
     # CLI tools
     git
+    git-crypt
     lazygit
     ranger
     btop
@@ -166,6 +173,7 @@
     cutter
 
     nasm    # assembly compiler
+    kdePackages.kgpg
 
     # Misc
     ydotool
@@ -213,6 +221,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    QT_PLUGIN_PATH = "$QT_PLUGIN_PATH:${inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.default}/lib/qt-6/plugins:${inputs.kwin-effects-glass.packages.${pkgs.system}.default}/lib/qt-6/plugins";
   };
 
   # Let Home Manager install and manage itself.

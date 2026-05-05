@@ -18,6 +18,8 @@ alias trixie="distrobox enter debian-trixie"
 alias appr="appimage-run"
 alias flakeupdate="nix flake update"
 
+alias capture-audio-stream="pw-record --target 75"
+
 # cd
 alias dev="cd ~/Development/"
 alias cdhome="cd ~/.config/home-manager"

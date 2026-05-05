@@ -112,6 +112,14 @@ container()
     fi
 }
 
+music_grabber() {
+    if [[ $1 == "-s" ]]; then
+        docker compose -f ~/Softwares/Docker/MusicGrabber/docker-compose.yml down
+    else
+        docker compose -f ~/Softwares/Docker/MusicGrabber/docker-compose.yml up -d
+    fi
+}
+
 # Check if running inside a Distrobox container
 if [ -n "$CONTAINER_ID" ] || [ -f "/run/.containerenv" ] || [ -f "/.dockerenv" ]; then
     PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "
@@ -127,6 +135,7 @@ export PATH="/usr/sbin:/sbin:$PATH"
 export PATH="/home/quun/Public/scripts/bin/:$PATH"
 export PATH="/home/quun/Softwares/binaries/:$PATH"
 export PATH="/home/quun/.config/emacs/bin/:$PATH"
+export PATH="/home/quun/.local/bin/:$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 

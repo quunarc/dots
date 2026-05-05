@@ -1,0 +1,24 @@
+{
+  "pluginList": [
+    "weppos/obsidian-mermaid-view"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "weppos/obsidian-mermaid-view",
+      "version": "0.5.0"
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "globalTokenName": "",
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

@@ -1,22 +1,37 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Study",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"Map of Contents\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 12996095
+      }
+    }
+  ],
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
-  "collapse-forces": true,
+  "collapse-forces": false,
   "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
+  "repelStrength": 12.9417879417879,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 1,
+  "linkDistance": 89,
+  "scale": 1.0136432647705078,
   "close": true
 }
