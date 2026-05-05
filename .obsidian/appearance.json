@@ -1,8 +1,5 @@
 {
-  "cssTheme": "Minimal",
   "enabledCssSnippets": [
-    "headings",
     "top-level-config"
-  ],
-  "accentColor": "#dd8d9d"
+  ]
 }

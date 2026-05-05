@@ -31,4 +31,5 @@ return {
     { "romainl/Apprentice" },
     { "vague-theme/vague.nvim" },
     { "water-sucks/darkrose.nvim" },
+    { "nyoom-engineering/oxocarbon.nvim" },
 }

@@ -29,4 +29,4 @@ require('kanagawa').setup({
 -- print(vim.inspect(palette.bg1))
 
 -- vim.cmd("colorscheme kanagawa")
-vim.cmd("colorscheme duskfox")
+vim.cmd("colorscheme vague")

@@ -47,6 +47,7 @@
         godot-mono
         godot
         renderdoc
+        unityhub
 
         # Art
         krita
@@ -74,7 +75,7 @@
         protonup-qt
         wine64
         steam-run
-        bottles
+        ckan
 
         # Emulation
         retroarch
@@ -97,8 +98,16 @@
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
-    inputs.kwin-effects-glass.packages.${systems}.default
-    inputs.kwin-effects-better-blur-dx.packages.${systems}.default
+    # inputs.kwin-effects-glass.packages.${systems}.default
+    # inputs.kwin-effects-better-blur-dx.packages.${systems}.default
+    # (inputs.kwin-effects-better-blur-dx.packages.${systems}.default.overrideAttrs (oldAttrs: {
+    #     # We manually inject the missing dependency into the build environment
+    #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [
+    #         kdePackages.kwin
+    #         kdePackages.kdecoration
+    #         kdePackages.extra-cmake-modules
+    #     ];
+    # }))
     inputs.my-nvim.packages.${systems}.default
 
     # Editors / IDEs
@@ -221,7 +230,8 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    QT_PLUGIN_PATH = "$QT_PLUGIN_PATH:${inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.default}/lib/qt-6/plugins:${inputs.kwin-effects-glass.packages.${pkgs.system}.default}/lib/qt-6/plugins";
+    # QT_PLUGIN_PATH = "$QT_PLUGIN_PATH:${inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.default}/lib/qt-6/plugins:${inputs.kwin-effects-glass.packages.${pkgs.system}.default}/lib/qt-6/plugins";
+    QT_PLUGIN_PATH = "$HOME/.nix-profile/lib/qt-6/plugins:$QT_PLUGIN_PATH";
   };
 
   # Let Home Manager install and manage itself.

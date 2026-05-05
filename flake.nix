@@ -15,8 +15,13 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    kwin-effects-glass = {
-        url = "github:4v3ngR/kwin-effects-glass";
+    # kwin-effects-glass = {
+    #     url = "github:4v3ngR/kwin-effects-glass";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    kwin-glass-x11 = {
+        url = "github:4v3ngR/kwin-effects-glass/0ae94cf5e709a894a9f1f54544cb17deb7f77d58";
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -30,8 +35,8 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    my-nvim.url = "path:/home/quun/.dotfiles/dots/NixvimLazyvim";
-    nvim-custom.url = "/home/quun/Softwares/NvimCustom/";
+    my-nvim.url = "path:./NixvimLazyvim";
+    # nvim-custom.url = "path:./NvimCustom/";
 
     nix-alien.url = "github:thiagokokada/nix-alien";
 
@@ -39,13 +44,39 @@
 
   outputs = { self, nixpkgs, home-manager, ... } @ inputs:
     let
+       system = "x86_64-linux";
        systems = "x86_64-linux";
     in
     {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+        ./configuration.nix
+        #
+        # home-manager.nixosModules.home-manager
+        #
+        # {
+        #     home-manager.useGlobalPkgs = true;
+        #     home-manager.useUserPackages = true;
+        #
+        #     home-manager.users.quun = import ./home.nix;
+        #
+        #     home-manager.extraSpecialArgs = {
+        #     inherit inputs;
+        #     };
+        # }
+        ];
+
+        specialArgs = {
+            inherit inputs;
+        };
+      };
+
       homeConfigurations.quun = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
         modules = [ ./home.nix ];
-	    extraSpecialArgs = { inherit self systems nixpkgs home-manager inputs; };
+	    extraSpecialArgs = { inherit self system systems nixpkgs home-manager inputs; };
       };
     };
 }

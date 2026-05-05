@@ -10,6 +10,8 @@ let
     sha256 = "0xc1wawnb0297h5khxblmf9pd1fry950xkcm7mwlck19s2906h80"; # Use a dummy or correct hash
   };
   lanzaboote = import lanzaboote-src;
+
+  better-blur = /nix/store/cpmifrj80q4sw189430j3mpwacb1qdvr-kwin-better-blur-2.3.0;
 in
 {
   imports =
@@ -164,7 +166,7 @@ in
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
     # of just the bare essentials.
     powerManagement.enable = false;
 
@@ -174,9 +176,9 @@ in
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     open = false;
 
@@ -307,7 +309,7 @@ in
   environment.systemPackages = with pkgs; [
 
     # Editors
-    vim 
+    vim
 
     # CLI tools
     wget curl tldr docker devenv home-manager lshw mesa-demos tailscale rclone
@@ -325,6 +327,8 @@ in
     file
     # build systems
     cmake gnumake scons pkg-config
+
+    better-blur
   ];
 
   # Services
@@ -337,12 +341,13 @@ in
     stdenv.cc.cc
     clang
     clang-tools
+    sdl3
     # pkgsi686Linux.stdenv.cc.cc
     # pkgsi686Linux.glibc
 
     icu
     libz
-    zlib 
+    zlib
     openssl
     libxml2
     curl
@@ -360,8 +365,8 @@ in
     fuse2
 
     #xorg libs
-    xorg.libX11 
-    xorg.libXi 
+    xorg.libX11
+    xorg.libXi
     xorg.libXext
     xorg.libXrandr
     xorg.libXrender

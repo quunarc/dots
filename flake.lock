@@ -57,28 +57,6 @@
         "type": "github"
       }
     },
-    "flake-parts_2": {
-      "inputs": {
-        "nixpkgs-lib": [
-          "nvim-custom",
-          "nixvim",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1769996383,
-        "narHash": "sha256-AnYjnFWgS49RlqX7LrC4uA+sCCDBj0Ry/WOJ5XWAsa0=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "57928607ea566b5db3ad13af0e57e921e6b12381",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -160,7 +138,7 @@
         "type": "github"
       }
     },
-    "kwin-effects-glass": {
+    "kwin-glass-x11": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -168,16 +146,17 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1767702844,
-        "narHash": "sha256-yxBuf/ehDf29cNYzfxXVrDn/gbU6r5d6gHeTzjhGHqc=",
+        "lastModified": 1772078172,
+        "narHash": "sha256-PXo6EtPzv48a2xIe/ooMKK7zuML/g15l42Hq/YdGmyE=",
         "owner": "4v3ngR",
         "repo": "kwin-effects-glass",
-        "rev": "086741e9e638ba58a436704bfac9fdaf176564e2",
+        "rev": "0ae94cf5e709a894a9f1f54544cb17deb7f77d58",
         "type": "github"
       },
       "original": {
         "owner": "4v3ngR",
         "repo": "kwin-effects-glass",
+        "rev": "0ae94cf5e709a894a9f1f54544cb17deb7f77d58",
         "type": "github"
       }
     },
@@ -188,15 +167,14 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1774275636,
-        "narHash": "sha256-yVnX2kAyJJ8rnB3oqjJ8EGwDjElMciFd44INcW7WUhw=",
-        "path": "/home/quun/.dotfiles/dots/NixvimLazyvim",
+        "path": "./NixvimLazyvim",
         "type": "path"
       },
       "original": {
-        "path": "/home/quun/.dotfiles/dots/NixvimLazyvim",
+        "path": "./NixvimLazyvim",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "nix-alien": {
       "inputs": {
@@ -287,22 +265,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
-      "locked": {
-        "lastModified": 1771861243,
-        "narHash": "sha256-mz05b1VyLWoTkNg8iJr3yXFJF7HDlwIUKI3ln39RacY=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "80d901ec0377e19ac3f7bb8c035201e2e098cc97",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixvim": {
       "inputs": {
         "flake-parts": [
@@ -329,56 +291,15 @@
         "type": "github"
       }
     },
-    "nixvim_2": {
-      "inputs": {
-        "flake-parts": "flake-parts_2",
-        "nixpkgs": "nixpkgs_4",
-        "systems": "systems_5"
-      },
-      "locked": {
-        "lastModified": 1771135771,
-        "narHash": "sha256-wyvBIhDuyCRyjB3yPg77qoyxrlgQtBR1rVW3c9knV3E=",
-        "owner": "nix-community",
-        "repo": "nixvim",
-        "rev": "ed0424f0b08d303a7348f52f7850ad1b2704f9ba",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixvim",
-        "type": "github"
-      }
-    },
-    "nvim-custom": {
-      "inputs": {
-        "nixpkgs": [
-          "nvim-custom",
-          "nixvim",
-          "nixpkgs"
-        ],
-        "nixvim": "nixvim_2"
-      },
-      "locked": {
-        "lastModified": 1771948427,
-        "narHash": "sha256-LOawIeSMKgCtw4f6DsbbpepiSdtca7qwJ1JnXt9YzOc=",
-        "path": "/home/quun/Softwares/NvimCustom/",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/quun/Softwares/NvimCustom/",
-        "type": "path"
-      }
-    },
     "root": {
       "inputs": {
         "csharplsp": "csharplsp",
         "home-manager": "home-manager",
         "kwin-effects-better-blur-dx": "kwin-effects-better-blur-dx",
-        "kwin-effects-glass": "kwin-effects-glass",
+        "kwin-glass-x11": "kwin-glass-x11",
         "my-nvim": "my-nvim",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_3",
-        "nvim-custom": "nvim-custom",
         "zen": "zen"
       }
     },
@@ -428,21 +349,6 @@
       }
     },
     "systems_4": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "systems_5": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",

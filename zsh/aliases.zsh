@@ -15,6 +15,7 @@ alias hmsf="home-manager switch --flake /home/quun/.dotfiles/dots/"
 alias sr="steam-run"
 alias clipb="xclip -selection clipboard"
 alias trixie="distrobox enter debian-trixie"
+alias parrot="distrobox enter parrotos"
 alias appr="appimage-run"
 alias flakeupdate="nix flake update"
 

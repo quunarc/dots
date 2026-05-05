@@ -19,6 +19,6 @@
   "noctishc.nvim": { "branch": "main", "commit": "f7c24adb2cd0eca9cf5e9d0fa6595512f82cf450" },
   "nvim-surround": { "branch": "main", "commit": "1098d7b3c34adcfa7feb3289ee434529abd4afd1" },
   "overseer.nvim": { "branch": "master", "commit": "392093e610333c0aea89bf43de7362e25783eada" },
-  "refactoring.nvim": { "branch": "master", "commit": "6784b54587e6d8a6b9ea199318512170ffb9e418" },
+  "oxocarbon.nvim": { "branch": "main", "commit": "a7ba74849a00546a311f8c146320b433900393e7" },
   "vague.nvim": { "branch": "main", "commit": "24cd29d277bf5259ab347c49d223d8cfb9057565" }
 }
