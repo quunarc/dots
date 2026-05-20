@@ -11,7 +11,6 @@ let
   };
   lanzaboote = import lanzaboote-src;
 
-  better-blur = /nix/store/cpmifrj80q4sw189430j3mpwacb1qdvr-kwin-better-blur-2.3.0;
 in
 {
   imports =
@@ -33,13 +32,6 @@ in
     pkiBundle = "/var/lib/sbctl/";
   };
 
-  # boot.loader.grub = {
-  #   enable = true;
-  #   device = "nodev";
-  #   efiSupport = true;
-  #   useOSProber = true;
-  # };
-
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
   # boot.binfmt.emulatedSystems = [ "i386-linux" ];
@@ -51,7 +43,7 @@ in
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "quun-omen"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -135,7 +127,7 @@ in
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_IN";
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -312,12 +304,12 @@ in
     vim
 
     # CLI tools
-    wget curl tldr docker devenv home-manager lshw mesa-demos tailscale rclone
+    wget curl tldr docker home-manager lshw mesa-demos tailscale
 
     # system
     networkmanager distrobox efibootmgr
     javaPackages.compiler.temurin-bin.jre-25
-    gcc rustup nodejs_24
+    gcc nodejs_24
 
     # important libraries
     nix-ld
@@ -327,8 +319,6 @@ in
     file
     # build systems
     cmake gnumake scons pkg-config
-
-    better-blur
   ];
 
   # Services
@@ -346,7 +336,6 @@ in
     # pkgsi686Linux.glibc
 
     icu
-    libz
     zlib
     openssl
     libxml2
@@ -361,6 +350,7 @@ in
     dbus
     fontconfig
     freetype
+    # both fuse versions are needed keep them both
     fuse3
     fuse2
 
@@ -400,10 +390,6 @@ in
 
   # boot.loader.grub.device = "nodev";
 
-  # fileSystems."/boot/efi" = {
-  #   device = "/dev/disk/by-uuid/4A06-5132";
-  #   fsType = "vfat";
-  # };
   fileSystems."/boot" = {
       device = "/dev/nvme0n1p1";
       fsType = "vfat";

@@ -1,0 +1,16 @@
+{
+  "name": "my-cpp-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["cpp"],
+        "path": "./cpp-class.json"
+      },
+      {
+        "language": ["all"],
+        "path": "./all.json"
+      }
+    ]
+  }
+}
+

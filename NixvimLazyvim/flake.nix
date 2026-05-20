@@ -93,6 +93,7 @@
                 ts-comments-nvim
                 which-key-nvim
                 toggleterm-nvim
+                vim-wakatime
                 { name = "catppuccin"; path = catppuccin-nvim; }
                 { name = "mini.ai"; path = mini-nvim; }
                 { name = "mini.icons"; path = mini-nvim; }

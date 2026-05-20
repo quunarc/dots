@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1722633ffde1b093",
+        "id": "0916b287c6ecbeb5",
         "type": "tabs",
         "children": [
           {
-            "id": "ba4e9221fc877ddd",
+            "id": "209d207d51d5fe9a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02 Reference/Nix Guide.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Nix Guide"
             }
           }
         ]
@@ -176,7 +180,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,46 +196,46 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "ba4e9221fc877ddd",
+  "active": "209d207d51d5fe9a",
   "lastOpenFiles": [
-    "05 Personal/Account Purposes and Task Division.md",
-    "02 Reference/GPG Encryption Quick Reference.md",
-    "01 Knowledge/Linkages in C++.md",
-    "04 Map of Contents/OpenGL.md",
-    "04 Map of Contents/C++.md",
-    "01 Knowledge/Vector and Matrices.md",
-    "03 Study/Earliest Mathematics Texts.md",
+    "02 Reference/Neovim Config Guide.md",
+    "02 Reference/Nix Guide.md",
+    "02 Reference/nixos-config-audit.md",
+    "Untitled.md",
+    "02 Reference/nixos-config-audit.md.pdf",
+    "02 Reference/Custom ssh key git push.md",
+    "repo_mirror.txt",
     "02 Reference/Characteristic Equation of Matrix and uses.md",
     "02 Reference/Compiling godot.md",
-    "02 Reference/Empirical formula calculation for JEE problems.md",
     "02 Reference/CSharp LSP support with omnisharp.md",
+    "01 Knowledge/Vector and Matrices.md",
+    "01 Knowledge/Assembly Fundamentals.md",
+    "writeup.md",
+    "04 Map of Contents/x86-64 Assembly.md",
+    "01 Knowledge/Stack Frame.md",
+    "01 Knowledge/Linkages in C++.md",
+    "04 Map of Contents/C++.md",
+    "02 Reference/Setting RPATH in nix to run binaries globally.md",
+    "Untitled.canvas",
+    "02 Reference/GPG Encryption Quick Reference.md",
     "02 Reference/General Notes.md",
+    "02 Reference/Preparation of KMnO4.md",
     "02 Reference/Syncthing Quick Setup.md",
-    "02 Reference/Using GDExtension.md",
     "02 Reference/Using git patches to ease workflow.md",
-    "05 Personal/pass schema.md",
-    "01 Knowledge/Using Structured binding to unpack values.md",
+    "02 Reference/Using GDExtension.md",
     "02 Reference/Git untrack files and add to .gdignore properly.md",
-    "05 Personal/Very crazy dream.md",
-    "Legend.md",
-    "_inbox.md",
-    "01 Knowledge/Type Casting.md",
-    "aga.md",
+    "03 Study/Possible Hooking into audio sinks and record DRM content.md",
+    "01 Knowledge/Process Hooking In Linux.md",
+    "01 Knowledge/Scope.md",
+    "Assets/Pasted image 20260305005320.png",
     "05 Personal/Account Purposes and Task Division.md.asc",
-    "05 Personal/Account Purposes and Task Divisio.md",
     "05 Personal/Account Purposes and Task Divisio.md.asc",
     "05 Personal/cGFzc3dvcmQgc2NoZW1lCg==.md.asc",
     "P.base",
-    "01 Knowledge/Assembly Fundamentals.md",
     "Untitled 20260316 054646.mdenc",
-    "01 Knowledge/Scope.md",
     "04 Map of Contents",
     "01 Knowledge",
-    "Assets/Pasted image 20260305005320.png",
     "Assets",
-    "Untitled.canvas",
-    "Untitled.mermaid",
-    "Study/History/Untitled.mermaid",
     "Untitled 1.canvas"
   ]
 }

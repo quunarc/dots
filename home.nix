@@ -29,13 +29,13 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    (writeShellScriptBin "nvidia-offload" ''
-      	export __NV_PRIME_RENDER_OFFLOAD=1
-      	export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-      	export __GLX_VENDOR_LIBRARY_NAME=nvidia
-      	export __VK_LAYER_NV_optimus=NVIDIA_only
-      	exec "$@"
-    '')
+    # (writeShellScriptBin "nvidia-offload" ''
+    #   	export __NV_PRIME_RENDER_OFFLOAD=1
+    #   	export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    #   	export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    #   	export __VK_LAYER_NV_optimus=NVIDIA_only
+    #   	exec "$@"
+    # '')
     #---------------------------------------------------------------------
 
     # Programs
@@ -99,7 +99,7 @@
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
     # inputs.kwin-effects-glass.packages.${systems}.default
-    # inputs.kwin-effects-better-blur-dx.packages.${systems}.default
+    inputs.kwin-effects-better-blur-dx.packages.${systems}.default
     # (inputs.kwin-effects-better-blur-dx.packages.${systems}.default.overrideAttrs (oldAttrs: {
     #     # We manually inject the missing dependency into the build environment
     #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [
@@ -154,10 +154,7 @@
     fd
     lsd
     nodePackages_latest.fkill-cli
-    steam-run
     bat
-    openssl
-    pinentry-all
     steghide
     ffmpeg
     rar
@@ -187,6 +184,7 @@
     # Misc
     ydotool
 
+    linuxKernel.packages.linux_6_18.xpadneo
     dotnetCorePackages.sdk_9_0-bin
     clang-tools
 

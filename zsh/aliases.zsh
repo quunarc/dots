@@ -38,7 +38,8 @@ alias emacs="emacs -fs"
 
 # aliases to open/use programs efficiently
 alias "c."="code ."
-alias "z."="zeditor ."
+alias zeditor="/nix/store/qjafif21g5a8fshimfn952cwyh959db9-zed-editor-1.1.7/bin/zeditor"
+alias "z."="/nix/store/qjafif21g5a8fshimfn952cwyh959db9-zed-editor-1.1.7/bin/zeditor ."
 alias ds='dolphin . > /dev/null 2>&1 &'
 alias clion='clion . > /dev/null 2>&1 &'
 alias lgit="lazygit"

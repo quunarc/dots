@@ -20,10 +20,10 @@
     #     inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    kwin-glass-x11 = {
-        url = "github:4v3ngR/kwin-effects-glass/0ae94cf5e709a894a9f1f54544cb17deb7f77d58";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # kwin-glass-x11 = {
+    #     url = "github:4v3ngR/kwin-effects-glass/0ae94cf5e709a894a9f1f54544cb17deb7f77d58";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     kwin-effects-better-blur-dx = {
       url = "github:xarblu/kwin-effects-better-blur-dx";

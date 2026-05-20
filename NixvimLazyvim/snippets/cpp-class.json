@@ -1,0 +1,16 @@
+{
+  "C++ Class": {
+    "prefix": "kclass",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "\t${1:ClassName}($2);",
+      "\t~${1:ClassName}();",
+      "",
+      "private:",
+      "\t$0",
+      "};"
+    ],
+    "description": "Basic C++ class template"
+  }
+}

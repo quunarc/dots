@@ -1,0 +1,10 @@
+{
+  "Header Section": {
+    "prefix": "hsep",
+    "body": [
+      "////////////////////////////////////// ${1:Model} //////////////////////////////////////",
+      "$0"
+    ],
+    "description": "Inserts a commented section header"
+  }
+}
