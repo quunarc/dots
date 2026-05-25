@@ -73,9 +73,9 @@
         prismlauncher
         protonup-rs
         protonup-qt
-        wine64
         steam-run
         ckan
+        gamescope
 
         # Emulation
         retroarch
@@ -184,7 +184,6 @@
     # Misc
     ydotool
 
-    linuxKernel.packages.linux_6_18.xpadneo
     dotnetCorePackages.sdk_9_0-bin
     clang-tools
 

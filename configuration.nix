@@ -23,6 +23,8 @@ in
 
   musnix.enable = true;
 
+  boot.blacklistedKernelModules = [ "hid-nintendo" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = lib.mkForce false;
 
@@ -43,7 +45,7 @@ in
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "quun-omen"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -133,6 +135,8 @@ in
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
+
+  # hardware.xone.enable = true;
 
   # ------------------ NVIDIA DRIVER ----------------------
 
@@ -414,6 +418,9 @@ in
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  # services.udev.extraRules = ''
+  #   ACTION=="add", ATTRS{idVendor}=="11c0", ATTRS{idProduct}=="5505", RUN+="/sbin/modprobe xpad", RUN+="/bin/sh -c 'echo 11c0 5505 > /sys/bus/usb/drivers/xpad/new_id'"
+  # '';
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -445,33 +452,53 @@ in
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.05"; # Did you read the comment?
 
-  specialisation = {
+# Make sure 'lib' is available in your arguments at the top of the file 
+# e.g., { config, pkgs, lib, ... }:
 
+specialisation = {
   x11.configuration = {
-
-    # --- Force X11 ---
     services.xserver.enable = true;
-    services.displayManager.sddm.wayland.enable = false;
+    services.displayManager.sddm.wayland.enable = lib.mkForce false;
 
-    # --- Nvidia X11 driver ---
-    services.xserver.videoDrivers = [ "nvidia" ];
+    # Force ONLY nvidia — no amdgpu in X at all
+    services.xserver.videoDrivers = lib.mkForce [ "nvidia" ];
+
+    hardware.graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
 
     hardware.nvidia = {
       modesetting.enable = true;
       nvidiaSettings = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+      prime = {
+        # Reverse sync: NVIDIA renders AND drives the display
+        # AMD is only used to hand off the signal to the panel/ports
+        reverseSync.enable = lib.mkForce true;
+        
+        # These must be off when using reverseSync
+        offload.enable = lib.mkForce false;
+        offload.enableOffloadCmd = lib.mkForce false;
+        sync.enable = lib.mkForce false;
+
+        nvidiaBusId = "PCI:1:0:0";
+        amdgpuBusId = "PCI:5:0:0";
+      };
     };
 
-    # --- PRIME Hybrid Offload ---
-    hardware.nvidia.prime = {
-      offload.enable = true;
-      offload.enableOffloadCmd = true;
+    # These two together ensure nvidia-drm is loaded before X starts
+    # and claims the framebuffer before amdgpu does
+    boot.kernelParams = lib.mkForce [
+      "nvidia-drm.modeset=1"
+      "nvidia-drm.fbdev=1"
+    ];
 
-      nvidiaBusId = "PCI:1:0:0";
-      amdgpuBusId = "PCI:5:0:0";
-    };
-    };
+    # Blacklist amdgpu from doing anything display-related in this specialisation
+    boot.blacklistedKernelModules = [ "amdgpu" ];
   };
+};
 
 }
 

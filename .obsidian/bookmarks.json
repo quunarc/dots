@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1779397212099,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1779397173947,
+          "path": "02 Reference/Nix Guide.md",
+          "subpath": "#Common Overrides"
+        }
+      ],
+      "title": "Nix"
+    }
+  ]
+}
