@@ -7,6 +7,7 @@ return {
             servers = {
                 nixd = {},
                 rust_analyzer = {},
+                glsl_analyzer = {},
                 clangd = {},
                 asm_lsp = {},
                 pyright = {},

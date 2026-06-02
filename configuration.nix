@@ -359,14 +359,14 @@ in
     fuse2
 
     #xorg libs
-    xorg.libX11
-    xorg.libXi
-    xorg.libXext
-    xorg.libXrandr
-    xorg.libXrender
-    xorg.libXcursor
-    xorg.libXinerama
-    xorg.libXfixes
+    libx11
+    libxi
+    libxext
+    libxinerama
+    libxrandr
+    libxrender
+    libxcursor
+    libxfixes
 
     libGL
     libGLU
@@ -471,7 +471,7 @@ specialisation = {
     hardware.nvidia = {
       modesetting.enable = true;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = lib.mkForce config.boot.kernelPackages.nvidiaPackages.stable;
 
       prime = {
         # Reverse sync: NVIDIA renders AND drives the display

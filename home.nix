@@ -60,7 +60,7 @@
 
         # Utilities
         qdirstat
-        qbittorrent
+        qbittorrent-enhanced
         easyeffects
         nicotine-plus
         mediasynclite
@@ -69,13 +69,14 @@
         gearlever
 
         # Games
-        lutris
+        # lutris
         prismlauncher
         protonup-rs
         protonup-qt
         steam-run
         ckan
         gamescope
+        vesktop
 
         # Emulation
         retroarch
@@ -90,7 +91,7 @@
         carla
         tauon
         cardinal     # cardinal vcv rack
-        helvum       # audio pipeline graph
+        crosspipe       # audio pipeline graph
 
     filen-desktop
     telegram-desktop
@@ -98,8 +99,9 @@
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
+    inputs.kwin-effects-forceblur.packages.${systems}.x11
     # inputs.kwin-effects-glass.packages.${systems}.default
-    inputs.kwin-effects-better-blur-dx.packages.${systems}.default
+    # inputs.kwin-effects-better-blur-dx.packages.${systems}.default
     # (inputs.kwin-effects-better-blur-dx.packages.${systems}.default.overrideAttrs (oldAttrs: {
     #     # We manually inject the missing dependency into the build environment
     #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [
@@ -113,9 +115,9 @@
     # Editors / IDEs
     # neovim
     emacs
-    zed-editor
-    jetbrains.idea-community-bin
-    jetbrains.clion
+    zed-editor-fhs
+    # jetbrains.idea
+    # jetbrains.clion
     vscode
 
     # Neovim plugins
@@ -126,7 +128,6 @@
         lua-language-server
         asm-lsp
         pyright
-        rust-analyzer
         glslls
 
     # vimPlugins.scnvim
@@ -153,7 +154,6 @@
     desktop-file-utils
     fd
     lsd
-    nodePackages_latest.fkill-cli
     bat
     steghide
     ffmpeg
@@ -161,6 +161,7 @@
     xclip
     lazydocker
     clifm
+    rustup
 
     #------------------------ LOW ---------------------------
     #graphics
@@ -172,6 +173,7 @@
     qemu_kvm
     debootstrap
     firejail
+    devenv
 
     # hacking
     ghidra-bin

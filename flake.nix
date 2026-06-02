@@ -5,15 +5,15 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # external
-    csharplsp = {
-        url = "github:SofusA/csharp-language-server";
-        inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # # external
+    # csharplsp = {
+    #     url = "github:SofusA/csharp-language-server";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # kwin-effects-glass = {
     #     url = "github:4v3ngR/kwin-effects-glass";
@@ -25,8 +25,13 @@
     #     inputs.nixpkgs.follows = "nixpkgs";
     # };
 
-    kwin-effects-better-blur-dx = {
-      url = "github:xarblu/kwin-effects-better-blur-dx";
+    # kwin-effects-better-blur-dx = {
+    #   url = "github:xarblu/kwin-effects-better-blur-dx";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    kwin-effects-forceblur = {
+      url = "github:can1357/kde-blur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

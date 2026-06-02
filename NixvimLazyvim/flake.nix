@@ -48,6 +48,8 @@
             tailwindcss-language-server
             typescript
             gopls
+            rust-analyzer
+            glsl_analyzer
         ];
 
         extraPlugins = [ pkgs.vimPlugins.lazy-nvim ];
