@@ -32,4 +32,5 @@ return {
     { "vague-theme/vague.nvim" },
     { "water-sucks/darkrose.nvim" },
     { "nyoom-engineering/oxocarbon.nvim" },
+    { "marko-cerovac/material.nvim" },
 }

@@ -27,6 +27,10 @@
   "git_panel": {
     "dock": "left",
   },
+  "toolbar": {
+      "breadcrumbs": false,
+      "quick_actions": false
+  },
   "ssh_connections": [
     {
       "host": "github-quunarc",
@@ -46,7 +50,7 @@
   ],
   "agent": {
     "dock": "right",
-    // "always_allow_tool_actions": true,
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-flash",
@@ -58,22 +62,21 @@
   },
   "tab_bar": {
     "show": true, // Turn off to hide file tabs entirely
-    // "file_icons": true, // Toggles language icons on tabs
+    "file_icons": true, // Toggles language icons on tabs
   },
   "toolbar": {
     "breadcrumbs": false, // Hides the file path path-tracker at the top
     "quick_actions": false, // Hides top-right action buttons (like run/play)
   },
   "status_bar": {
-    // "show": true, // Turn off to hide the bottom information bar
+    "show": true, // Turn off to hide the bottom information bar
   },
   "ui_font_size": 15,
   "buffer_font_size": 14,
   "buffer_font_family": "FiraCode Nerd Font",
   "vim_mode": true,
   "terminal": {
-      "default_height": 9999,
-      "alternate_scroll": "off",
+      "default_height": 9999
   },
 
   // "theme": {
@@ -84,7 +87,7 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Iced Latte (Blur)",
-    "dark": "Catpuccin Blur Corrected",
+    "dark": "Catppuccin Espresso (Blur) [Light]",
   },
 
   "load_direnv": "direct",

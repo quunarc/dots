@@ -17,6 +17,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       /home/quun/System/musnix
+      ./cachix.nix
 
       lanzaboote.nixosModules.lanzaboote
     ];

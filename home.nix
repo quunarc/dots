@@ -29,14 +29,10 @@
 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    # (writeShellScriptBin "nvidia-offload" ''
-    #   	export __NV_PRIME_RENDER_OFFLOAD=1
-    #   	export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
-    #   	export __GLX_VENDOR_LIBRARY_NAME=nvidia
-    #   	export __VK_LAYER_NV_optimus=NVIDIA_only
-    #   	exec "$@"
-    # '')
-    #---------------------------------------------------------------------
+    # Custom
+        (writeShellScriptBin "project-init" ''
+            exec ${pkgs.python3}/bin/python3 /home/quun/.dotfiles/dots/scripts/cpp-init/project-init.py "$@"
+        '')
 
     # Programs
         # Browser
@@ -47,16 +43,17 @@
         godot-mono
         godot
         renderdoc
-        unityhub
 
         # Art
         krita
         aseprite
-        gimp
         blender
+        inkscape
+        gimp
 
         # Productivity
         obsidian
+        anki
 
         # Utilities
         qdirstat
@@ -67,16 +64,21 @@
         strawberry
         obs-studio
         gearlever
+        gpu-screen-recorder-gtk
+        proton-vpn
+        sshfs
 
         # Games
         # lutris
-        prismlauncher
+        prismlauncher-unwrapped
+        modrinth-app-unwrapped
+        mcaselector
         protonup-rs
         protonup-qt
         steam-run
         ckan
-        gamescope
         vesktop
+        lutris-unwrapped
 
         # Emulation
         retroarch
@@ -92,32 +94,25 @@
         tauon
         cardinal     # cardinal vcv rack
         crosspipe       # audio pipeline graph
+        picard
+        kdePackages.kdenlive
+        davinci-resolve
 
     filen-desktop
     telegram-desktop
+    megasync
 
     # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
     inputs.nix-alien.packages.${systems}.default
     inputs.kwin-effects-forceblur.packages.${systems}.x11
-    # inputs.kwin-effects-glass.packages.${systems}.default
-    # inputs.kwin-effects-better-blur-dx.packages.${systems}.default
-    # (inputs.kwin-effects-better-blur-dx.packages.${systems}.default.overrideAttrs (oldAttrs: {
-    #     # We manually inject the missing dependency into the build environment
-    #     nativeBuildInputs = (oldAttrs.nativeBuildInputs or []) ++ [
-    #         kdePackages.kwin
-    #         kdePackages.kdecoration
-    #         kdePackages.extra-cmake-modules
-    #     ];
-    # }))
     inputs.my-nvim.packages.${systems}.default
 
     # Editors / IDEs
     # neovim
-    emacs
     zed-editor-fhs
-    # jetbrains.idea
-    # jetbrains.clion
+    jetbrains.idea
+    jetbrains.clion
     vscode
 
     # Neovim plugins

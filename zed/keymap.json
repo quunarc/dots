@@ -278,4 +278,46 @@
       "b": "vim::AnyBrackets",
     },
   },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "bindings": {
+      "ctrl-j": "editor::MoveDown"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "bindings": {
+      "ctrl-alt-j": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-j": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-j": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-j": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor",
+    "bindings": {
+      "ctrl-k": "editor::MoveUp"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-k": "pane::SplitUp"
+    }
+  }
 ]

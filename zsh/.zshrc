@@ -121,13 +121,56 @@ music_grabber() {
 }
 
 # Check if running inside a Distrobox container
+# if [ -n "$CONTAINER_ID" ] || [ -f "/run/.containerenv" ] || [ -f "/.dockerenv" ]; then
+#     PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "
+#     if [[ $PWD/ = /home/quun/Containers/debian-trixie/* ]]; then
+#         cd $PWD
+#     else
+#         cd /home/quun/Containers/debian-trixie/
+#     fi
+# fi
+
+# Check if running inside a Distrobox container
 if [ -n "$CONTAINER_ID" ] || [ -f "/run/.containerenv" ] || [ -f "/.dockerenv" ]; then
-    PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "
-    if [[ $PWD/ = /home/quun/Containers/debian-trixie/* ]]; then
-        cd $PWD
-    else
-        cd /home/quun/Containers/debian-trixie/
+    # Try to detect container name from multiple sources
+    CONTAINER_NAME=""
+
+    # First check CONTAINER_ID (most reliable for distrobox)
+    if [ -n "$CONTAINER_ID" ]; then
+        CONTAINER_NAME="$CONTAINER_ID"
     fi
+
+    # Then check DISTROBOX_ENTER_PATH
+    if [ -z "$CONTAINER_NAME" ] && [ -n "$DISTROBOX_ENTER_PATH" ]; then
+        CONTAINER_NAME=$(basename "$DISTROBOX_ENTER_PATH")
+    fi
+
+    # Fallback to hostname
+    if [ -z "$CONTAINER_NAME" ]; then
+        CONTAINER_NAME=$(hostname)
+    fi
+
+    # Remove any extra characters (like -home suffix)
+    CONTAINER_NAME=$(echo "$CONTAINER_NAME" | sed 's/-home$//')
+
+    case "$CONTAINER_NAME" in
+        *parrotos-rev*|*parrot*)
+            PS1="%{$(tput setaf 196)%}%n%{$(tput setaf 208)%}@%{$(tput setaf 190)%}parrot %{$(tput setaf 46)%}%1~ %{$(tput sgr0)%}$ "
+            if [[ $PWD/ != /home/quun/Containers/parrotos-rev/* ]]; then
+                cd /home/quun/Containers/parrot-home/
+            fi
+            ;;
+        *debian-trixie*|*trixie*)
+            PS1="%{$(tput setaf 226)%}%n%{$(tput setaf 220)%}@%{$(tput setaf 214)%}trixie %{$(tput setaf 43)%}%1~ %{$(tput sgr0)%}$ "
+            if [[ $PWD/ != /home/quun/Containers/debian-trixie/* ]]; then
+                cd /home/quun/Containers/debian-trixie/
+            fi
+            ;;
+        *)
+            # Default fallback prompt for any other container
+            PS1="%{$(tput setaf 255)%}%n%{$(tput setaf 240)%}@%{$(tput setaf 244)%}container %{$(tput setaf 39)%}%1~ %{$(tput sgr0)%}$ "
+            ;;
+    esac
 fi
 
 
