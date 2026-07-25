@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    latest-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     kwin-effects-forceblur = {
       url = "github:can1357/kde-blur";
       inputs.nixpkgs.follows = "nixpkgs";

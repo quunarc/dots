@@ -40,8 +40,9 @@
         syncthing
 
         # Engines
-        godot-mono
-        godot
+        inputs.latest-nixpkgs.legacyPackages.${system}.godot
+        inputs.latest-nixpkgs.legacyPackages.${system}.godot-mono
+        # godot
         renderdoc
 
         # Art
@@ -57,7 +58,7 @@
 
         # Utilities
         qdirstat
-        qbittorrent-enhanced
+        inputs.latest-nixpkgs.legacyPackages.${system}.qbittorrent-enhanced
         easyeffects
         nicotine-plus
         mediasynclite
@@ -102,9 +103,8 @@
     telegram-desktop
     megasync
 
-    # Flake packages
     inputs.zen.packages.${systems}.default # Zen Browser
-    inputs.nix-alien.packages.${systems}.default
+    # inputs.nix-alien.packages.${systems}.default
     inputs.kwin-effects-forceblur.packages.${systems}.x11
     inputs.my-nvim.packages.${systems}.default
 
