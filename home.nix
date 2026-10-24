@@ -30,8 +30,9 @@
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     # Custom
+      # exec ${pkgs.python3}/bin/python3 /home/quun/.dotfiles/dots/scripts/cpp-init/project-init.py "$@"
         (writeShellScriptBin "project-init" ''
-            exec ${pkgs.python3}/bin/python3 /home/quun/.dotfiles/dots/scripts/cpp-init/project-init.py "$@"
+            exec ~/.dotfiles/dots/scripts/bin/project-init "''$@"
         '')
 
     # Programs
@@ -40,10 +41,8 @@
         syncthing
 
         # Engines
-        inputs.latest-nixpkgs.legacyPackages.${system}.godot
-        inputs.latest-nixpkgs.legacyPackages.${system}.godot-mono
-        # godot
-        renderdoc
+        godot
+        godot-mono
 
         # Art
         krita
@@ -55,24 +54,25 @@
         # Productivity
         obsidian
         anki
+        libreoffice
 
         # Utilities
         qdirstat
-        inputs.latest-nixpkgs.legacyPackages.${system}.qbittorrent-enhanced
+        qbittorrent-enhanced
         easyeffects
         nicotine-plus
-        mediasynclite
         strawberry
         obs-studio
         gearlever
         gpu-screen-recorder-gtk
         proton-vpn
         sshfs
+        kdePackages.kcalc
 
         # Games
         # lutris
-        prismlauncher-unwrapped
-        modrinth-app-unwrapped
+        prismlauncher
+        # prismlauncher-unwrapped
         mcaselector
         protonup-rs
         protonup-qt
@@ -82,22 +82,17 @@
         lutris-unwrapped
 
         # Emulation
-        retroarch
-        azahar
+        dolphin-emu
 
         # Media
         supersonic
         vlc
         vlc-bittorrent
-        supercollider
-        vital
-        carla
         tauon
-        cardinal     # cardinal vcv rack
         crosspipe       # audio pipeline graph
         picard
         kdePackages.kdenlive
-        davinci-resolve
+        # davinci-resolve
 
     filen-desktop
     telegram-desktop
@@ -105,7 +100,7 @@
 
     inputs.zen.packages.${systems}.default # Zen Browser
     # inputs.nix-alien.packages.${systems}.default
-    inputs.kwin-effects-forceblur.packages.${systems}.x11
+    # inputs.kwin-effects-forceblur.packages.${systems}.x11
     inputs.my-nvim.packages.${systems}.default
 
     # Editors / IDEs
@@ -114,6 +109,10 @@
     jetbrains.idea
     jetbrains.clion
     vscode
+    sublime3
+    antigravity-ide-fhs
+
+    pi-coding-agent
 
     # Neovim plugins
         # LSP
@@ -166,8 +165,6 @@
 
     # CONTAINERIZATION
     qemu_kvm
-    debootstrap
-    firejail
     devenv
 
     # hacking
@@ -180,9 +177,6 @@
 
     # Misc
     ydotool
-
-    dotnetCorePackages.sdk_9_0-bin
-    clang-tools
 
     #------------------------ END ---------------------------
   ];

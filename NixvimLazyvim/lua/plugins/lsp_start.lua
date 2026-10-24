@@ -1,11 +1,13 @@
 return {
-    { "mason-org/mason-lspconfig.nvim", enabled = false },
-    { "mason-org/mason.nvim",           enabled = false },
     {
         "neovim/nvim-lspconfig",
         opts = {
             servers = {
-                nixd = {},
+                nixd = {
+                    nixpkgs = {
+                        expr = 'import (builtins.getFlake "/home/quun/.dotfiles/dots").inputs.nixpkgs { }',
+                    },
+                },
                 rust_analyzer = {},
                 glsl_analyzer = {},
                 clangd = {},

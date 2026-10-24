@@ -1,13 +1,4 @@
 {
-  "obsidian-minimal-settings:toggle-minimal-focus-mode": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "F"
-    }
-  ],
   "global-search:open": [
     {
       "modifiers": [
@@ -25,5 +16,23 @@
       "key": "F"
     }
   ],
-  "editor:open-search": []
+  "editor:open-search": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "F"
+    }
+  ],
+  "workspaces:open-modal": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "W"
+    }
+  ],
+  "workspace:close-window": []
 }

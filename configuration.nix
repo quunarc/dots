@@ -329,6 +329,9 @@ in
   # Services
   services.tailscale.enable = true;
 
+  services.softether.enable = true;
+  services.softether.vpnserver.enable = true;
+
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
@@ -424,8 +427,8 @@ in
   # '';
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 443 992 5555 ];
+  networking.firewall.allowedUDPPorts = [ 500 4500 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 

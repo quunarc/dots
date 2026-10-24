@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -24,7 +24,7 @@
     my-nvim.url = "path:./NixvimLazyvim";
     # nvim-custom.url = "path:./NvimCustom/";
 
-    nix-alien.url = "github:thiagokokada/nix-alien";
+    # nix-alien.url = "github:thiagokokada/nix-alien";
 
   };
 

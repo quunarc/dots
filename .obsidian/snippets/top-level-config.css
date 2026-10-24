@@ -53,6 +53,7 @@ body {
     margin: auto;
 }
 
+
 /* Below 2 snippets adjust the spacing between headings. */
 /* .mod-cm6 .cm-editor  */
 .HyperMD-header, .markdown-reading-view .markdown-preview-section :is(h1,h2,h3,h4,h5,h6) {
